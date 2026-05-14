@@ -9,11 +9,15 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .logo-badge { background-color: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 0 40px rgba(59, 130, 246, 0.15); transition: transform 0.3s ease; }
+        .logo-badge:hover { transform: translateY(-4px); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-6">
     <header class="text-center mb-16 flex flex-col items-center">
-        <img src="apps/delivery-rider-log/images/saymake_log.png" alt="SayMake Logo" class="h-32 w-auto mb-6" />
+        <div class="logo-badge mb-6">
+            <img src="apps/delivery-rider-log/images/saymake_log.png" alt="SayMake Logo" class="h-28 w-auto" />
+        </div>
         <div class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-orange-500 uppercase bg-orange-500/10 rounded-full border border-orange-500/20">
             SayMake Studio
         </div>
@@ -40,15 +44,16 @@
             </div>
         </a>
 
-        <!-- Coming Soon Placeholder -->
-        <div class="glass flex flex-col items-center justify-center p-8 rounded-3xl opacity-50 border-dashed">
+        <div class="glass flex flex-col items-center justify-center p-8 rounded-3xl opacity-50 border-dashed border border-slate-700">
             <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-xl mb-4 text-slate-500">+</div>
             <p class="text-slate-500 font-medium italic">Next Tool Coming Soon...</p>
         </div>
     </main>
 
-    <footer class="mt-20 text-slate-600 text-xs text-center flex flex-col items-center gap-4">
-        <img src="apps/delivery-rider-log/images/saymake_log.png" alt="SayMake Logo" class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity" />
+    <footer class="mt-20 text-slate-600 text-xs text-center flex flex-col items-center gap-6">
+        <div class="bg-white p-3 rounded-xl opacity-40 hover:opacity-100 transition-opacity">
+            <img src="apps/delivery-rider-log/images/saymake_log.png" alt="SayMake Logo" class="h-10 w-auto" />
+        </div>
         <div>
             <p>&copy; 2026 SayMake Studio. All rights reserved.</p>
         <div class="mt-2 flex justify-center gap-4">
