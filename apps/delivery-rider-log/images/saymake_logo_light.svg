@@ -1,8 +1,12 @@
 <svg width="400" height="150" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="200" cy="45" r="30" stroke="#001F3F" stroke-width="1.5" stroke-dasharray="2 2"/>
-  <path d="M185 45L200 30L215 45L200 60L185 45Z" fill="#001F3F"/>
-  <circle cx="150" cy="85" r="8" fill="#001F3F"/>
-  <path d="M158 85C170 85 180 95 190 95" stroke="#001F3F" stroke-width="2.5"/>
+  <!-- 아이콘에 선명한 시안 컬러 적용 -->
+  <circle cx="200" cy="45" r="30" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M185 45L200 30L215 45L200 60L185 45Z" fill="#00E5FF"/>
+  <circle cx="150" cy="85" r="8" fill="#00E5FF"/>
+  <path d="M158 85C170 85 180 95 190 95" stroke="#00E5FF" stroke-width="2.5"/>
+
+  <!-- 글자는 선명한 다크 네이비 유지 -->
   <text x="200" y="105" font-family="Serif, Georgia" font-size="42" font-weight="bold" fill="#0F172A" text-anchor="middle">SayMake</text>
+  
   <text x="200" y="130" font-family="sans-serif" font-size="12" letter-spacing="1" fill="#475569" text-anchor="middle">CRAFTING DIGITAL TOOLS</text>
 </svg>
