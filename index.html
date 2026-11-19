@@ -33,14 +33,13 @@
         })();
     </script>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-between p-6">
-    <!-- Top Navigation / Language Selector -->
-    <nav class="w-full max-w-6xl flex justify-end pt-2 pb-6">
-        <div class="inline-flex items-center rounded-full p-1 bg-slate-800/90 border border-slate-700/80 text-xs font-semibold shadow-inner">
-            <button type="button" onclick="setLang('ko')" id="btn-lang-ko" class="px-3.5 py-1.5 rounded-full transition-all">한국어</button>
-            <button type="button" onclick="setLang('en')" id="btn-lang-en" class="px-3.5 py-1.5 rounded-full transition-all">English</button>
-        </div>
-    </nav>
+<body class="min-h-screen flex flex-col items-center justify-between p-6 pt-16 md:pt-20">
+    <!-- Fixed Floating Language Switcher -->
+    <aside aria-label="Language Selector" class="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex items-center gap-1 p-1 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-2xl">
+        <span class="pl-2.5 pr-1 text-slate-400 text-sm select-none" aria-hidden="true">🌐</span>
+        <button type="button" onclick="setLang('ko')" id="btn-lang-ko" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200">한국어</button>
+        <button type="button" onclick="setLang('en')" id="btn-lang-en" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200">English</button>
+    </aside>
 
     <header class="text-center mb-16 flex flex-col items-center">
         <img src="assets/logo/saymake_logo_dark.svg" alt="SayMake Logo" class="h-40 w-auto mb-6" />
@@ -180,11 +179,11 @@
             if (!btnKo || !btnEn) return;
 
             if (lang === 'ko') {
-                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all bg-orange-500 text-white shadow-sm font-bold';
-                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all text-slate-400 hover:text-slate-200';
+                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 bg-orange-500 text-white shadow-md font-bold';
+                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 text-slate-400 hover:text-slate-200 font-medium';
             } else {
-                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all bg-orange-500 text-white shadow-sm font-bold';
-                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all text-slate-400 hover:text-slate-200';
+                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 bg-orange-500 text-white shadow-md font-bold';
+                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 text-slate-400 hover:text-slate-200 font-medium';
             }
             document.title = titles[lang] || titles.ko;
         }
@@ -195,6 +194,11 @@
             try {
                 localStorage.setItem('saymake_lang', target);
             } catch (e) {}
+            if (window.history && window.history.replaceState) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('lang', target);
+                window.history.replaceState({}, '', url.toString());
+            }
             updateLangButtons(target);
         }
 

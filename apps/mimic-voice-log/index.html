@@ -34,39 +34,39 @@
     </script>
 </head>
 <body class="min-h-screen">
+    <!-- Fixed Floating Language Switcher -->
+    <aside aria-label="Language Selector" class="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex items-center gap-1 p-1 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xl">
+        <span class="pl-2.5 pr-1 text-slate-400 text-sm select-none" aria-hidden="true">🌐</span>
+        <button type="button" onclick="setLang('ko')" id="btn-lang-ko" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200">한국어</button>
+        <button type="button" onclick="setLang('en')" id="btn-lang-en" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200">English</button>
+    </aside>
+
     <!-- Navigation -->
-    <nav class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
+    <nav class="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center pr-44 md:pr-48">
         <a href="../../index.html" class="flex items-center gap-2 font-black text-xl tracking-tighter hover:opacity-80 transition-opacity">
             <span class="text-2xl">🎙️</span> ShadowMimic Log
         </a>
-        <div class="flex items-center gap-6">
-            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-500">
-                <a href="#features" class="hover:text-violet-600 transition-colors">
-                    <span class="lang-ko">주요 기능</span>
-                    <span class="lang-en">Features</span>
-                </a>
-                <a href="#support" class="hover:text-violet-600 transition-colors">
-                    <span class="lang-ko">고객 지원</span>
-                    <span class="lang-en">Support</span>
-                </a>
-                <a href="terms.html" class="hover:text-violet-600 transition-colors">
-                    <span class="lang-ko">이용약관</span>
-                    <span class="lang-en">Terms</span>
-                </a>
-                <a href="privacy.html" class="hover:text-violet-600 transition-colors">
-                    <span class="lang-ko">개인정보처리방침</span>
-                    <span class="lang-en">Privacy</span>
-                </a>
-                <a href="../../index.html" class="hover:text-violet-600 transition-colors">
-                    <span class="lang-ko">SayMake 홈</span>
-                    <span class="lang-en">Home</span>
-                </a>
-            </div>
-            <!-- Language Toggle Button -->
-            <div class="inline-flex items-center rounded-full p-1 bg-slate-100 border border-slate-200 text-xs font-semibold">
-                <button type="button" onclick="setLang('ko')" id="btn-lang-ko" class="px-3 py-1 rounded-full transition-all">한국어</button>
-                <button type="button" onclick="setLang('en')" id="btn-lang-en" class="px-3 py-1 rounded-full transition-all">English</button>
-            </div>
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-500">
+            <a href="#features" class="hover:text-violet-600 transition-colors">
+                <span class="lang-ko">주요 기능</span>
+                <span class="lang-en">Features</span>
+            </a>
+            <a href="#support" class="hover:text-violet-600 transition-colors">
+                <span class="lang-ko">고객 지원</span>
+                <span class="lang-en">Support</span>
+            </a>
+            <a href="terms.html" class="hover:text-violet-600 transition-colors">
+                <span class="lang-ko">이용약관</span>
+                <span class="lang-en">Terms</span>
+            </a>
+            <a href="privacy.html" class="hover:text-violet-600 transition-colors">
+                <span class="lang-ko">개인정보처리방침</span>
+                <span class="lang-en">Privacy</span>
+            </a>
+            <a href="../../index.html" class="hover:text-violet-600 transition-colors">
+                <span class="lang-ko">SayMake 홈</span>
+                <span class="lang-en">Home</span>
+            </a>
         </div>
     </nav>
 
@@ -225,11 +225,11 @@
             if (!btnKo || !btnEn) return;
 
             if (lang === 'ko') {
-                btnKo.className = 'px-3 py-1 rounded-full transition-all bg-violet-600 text-white shadow-sm font-bold';
-                btnEn.className = 'px-3 py-1 rounded-full transition-all text-slate-600 hover:text-slate-900';
+                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 bg-violet-600 text-white shadow-md font-bold';
+                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 text-slate-600 hover:text-slate-900 font-medium';
             } else {
-                btnEn.className = 'px-3 py-1 rounded-full transition-all bg-violet-600 text-white shadow-sm font-bold';
-                btnKo.className = 'px-3 py-1 rounded-full transition-all text-slate-600 hover:text-slate-900';
+                btnEn.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 bg-violet-600 text-white shadow-md font-bold';
+                btnKo.className = 'px-3.5 py-1.5 rounded-full transition-all duration-200 text-slate-600 hover:text-slate-900 font-medium';
             }
             document.title = titles[lang] || titles.ko;
         }
@@ -240,6 +240,11 @@
             try {
                 localStorage.setItem('saymake_lang', target);
             } catch (e) {}
+            if (window.history && window.history.replaceState) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('lang', target);
+                window.history.replaceState({}, '', url.toString());
+            }
             updateLangButtons(target);
         }
 
