@@ -306,28 +306,50 @@
 
   <script>
     (function () {
+      const params = new URLSearchParams(window.location.search);
+      const theme = params.get("theme");
+      if (theme === "dark") document.documentElement.classList.add("dark");
+      else if (theme === "light") document.documentElement.classList.add("light");
+
+      function detectDefaultLang() {
+        const urlLang = (params.get("lang") || "").toLowerCase();
+        if (urlLang.startsWith("ko")) return "ko";
+        if (urlLang.startsWith("en")) return "en";
+
+        const navLangs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || ""];
+
+        for (const l of navLangs) {
+          if (typeof l === "string" && l.toLowerCase().startsWith("ko")) {
+            return "ko";
+          }
+        }
+        return "en";
+      }
+
       const tabs = document.querySelectorAll(".lang-btn");
       const sections = document.querySelectorAll(".lang-section");
 
-      function setLang(lang) {
-        tabs.forEach(t => t.classList.toggle("active", t.dataset.lang === lang));
-        sections.forEach(s => s.classList.toggle("active", s.id === "lang-" + lang));
-        try { localStorage.setItem("mimic_legal_lang", lang); } catch (e) {}
+      function setLang(lang, updateUrl) {
+        const target = (lang === "ko") ? "ko" : "en";
+        document.documentElement.lang = target;
+        tabs.forEach(t => t.classList.toggle("active", t.dataset.lang === target));
+        sections.forEach(s => s.classList.toggle("active", s.id === "lang-" + target));
+        if (updateUrl && window.history && window.history.replaceState) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("lang", target);
+          window.history.replaceState({}, "", url.toString());
+        }
       }
 
       tabs.forEach(tab => {
-        tab.addEventListener("click", () => setLang(tab.dataset.lang));
+        tab.addEventListener("click", () => setLang(tab.dataset.lang, true));
       });
 
-      const params = new URLSearchParams(window.location.search);
-      const urlLang = params.get("lang");
-      let saved = null;
-      try { saved = localStorage.getItem("mimic_legal_lang"); } catch (e) {}
-      const userLang = (navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en";
-      const target = ["ko", "en"].includes(urlLang) ? urlLang : (saved || userLang);
-      setLang(target);
+      const initialLang = detectDefaultLang();
+      setLang(initialLang, false);
     })();
   </script>
 </body>
-
 </html>

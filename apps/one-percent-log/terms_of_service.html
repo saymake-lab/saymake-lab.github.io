@@ -141,11 +141,6 @@
       <div class="lang-tabs" role="tablist" aria-label="Language">
         <button type="button" class="lang-btn" data-lang="ko">한국어</button>
         <button type="button" class="lang-btn" data-lang="en">English</button>
-        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
-        <button type="button" class="lang-btn" data-lang="zh-TW">繁體中文</button>
-        <button type="button" class="lang-btn" data-lang="de">Deutsch</button>
-        <button type="button" class="lang-btn" data-lang="fr">Français</button>
-        <button type="button" class="lang-btn" data-lang="es">Español</button>
       </div>
     </div>
 
@@ -468,46 +463,49 @@
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
-      const theme = params.get('theme');
-      if (theme === 'dark') document.documentElement.classList.add('dark');
-      else if (theme === 'light') document.documentElement.classList.add('light');
+      const theme = params.get("theme");
+      if (theme === "dark") document.documentElement.classList.add("dark");
+      else if (theme === "light") document.documentElement.classList.add("light");
 
-      const supported = ['ko', 'en', 'ja', 'zh-TW', 'de', 'fr', 'es'];
-      function normalizeLang(raw) {
-        if (!raw) return null;
-        const lower = raw.toLowerCase();
-        if (lower.startsWith('ko')) return 'ko';
-        if (lower.startsWith('ja')) return 'ja';
-        if (lower.startsWith('zh')) return 'zh-TW';
-        if (lower.startsWith('de')) return 'de';
-        if (lower.startsWith('fr')) return 'fr';
-        if (lower.startsWith('es')) return 'es';
-        if (lower.startsWith('en')) return 'en';
-        return null;
+      function detectDefaultLang() {
+        const urlLang = (params.get("lang") || "").toLowerCase();
+        if (urlLang.startsWith("ko")) return "ko";
+        if (urlLang.startsWith("en")) return "en";
+
+        const navLangs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || ""];
+
+        for (const l of navLangs) {
+          if (typeof l === "string" && l.toLowerCase().startsWith("ko")) {
+            return "ko";
+          }
+        }
+        return "en";
       }
 
       function setLang(lang, updateUrl) {
-        if (!supported.includes(lang)) lang = 'ko';
-        document.documentElement.lang = lang === 'zh-TW' ? 'zh-Hant' : lang;
-        document.querySelectorAll('.lang-section').forEach((el) => {
-          el.classList.toggle('active', el.id === 'lang-' + lang);
+        const target = (lang === "ko") ? "ko" : "en";
+        document.documentElement.lang = target;
+        document.querySelectorAll(".lang-section").forEach((el) => {
+          el.classList.toggle("active", el.id === "lang-" + target);
         });
-        document.querySelectorAll('.lang-btn').forEach((btn) => {
-          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.getAttribute("data-lang") === target);
         });
         if (updateUrl && window.history && window.history.replaceState) {
           const url = new URL(window.location.href);
-          url.searchParams.set('lang', lang);
-          window.history.replaceState({}, '', url.toString());
+          url.searchParams.set("lang", target);
+          window.history.replaceState({}, "", url.toString());
         }
       }
 
-      const initial = normalizeLang(params.get('lang')) || normalizeLang(navigator.language) || 'ko';
+      const initial = detectDefaultLang();
       setLang(initial, false);
 
-      document.querySelectorAll('.lang-btn').forEach((btn) => {
-        btn.addEventListener('click', function () {
-          setLang(this.getAttribute('data-lang'), true);
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          setLang(this.getAttribute("data-lang"), true);
         });
       });
     })();
