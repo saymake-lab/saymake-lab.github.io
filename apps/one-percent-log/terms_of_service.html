@@ -477,15 +477,8 @@
           if (saved === "ko" || saved === "en") return saved;
         } catch (e) {}
 
-        const navLangs = (navigator.languages && navigator.languages.length)
-          ? navigator.languages
-          : [navigator.language || ""];
-
-        for (const l of navLangs) {
-          if (typeof l === "string" && l.toLowerCase().startsWith("ko")) {
-            return "ko";
-          }
-        }
+        const primary = (navigator.language || (navigator.languages && navigator.languages[0]) || "").toLowerCase();
+        if (primary.startsWith("ko")) return "ko";
         return "en";
       }
 
@@ -497,7 +490,17 @@
           el.classList.toggle("active", el.id === "lang-" + target);
         });
         document.querySelectorAll(".lang-btn").forEach((btn) => {
-          btn.classList.toggle("active", btn.getAttribute("data-lang") === target);
+          btn.classList.toggle("active", (btn.getAttribute("data-lang") || (btn.dataset && btn.dataset.lang)) === target);
+        });
+        document.querySelectorAll("a[href]").forEach(a => {
+          const href = a.getAttribute("href");
+          if (href && (href.endsWith(".html") || href.includes(".html?")) && !href.startsWith("http") && !href.startsWith("mailto:")) {
+            try {
+              const u = new URL(a.href, window.location.href);
+              u.searchParams.set("lang", target);
+              a.href = u.pathname + u.search + u.hash;
+            } catch (e) {}
+          }
         });
         if (updateUrl && window.history && window.history.replaceState) {
           const url = new URL(window.location.href);

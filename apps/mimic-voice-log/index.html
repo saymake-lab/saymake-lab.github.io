@@ -22,11 +22,9 @@
                     const saved = localStorage.getItem('saymake_lang');
                     if (saved === 'ko' || saved === 'en') return saved;
                 } catch (e) {}
-                const langs = navigator.languages || [navigator.language || ''];
-                for (const l of langs) {
-                    if (l && l.toLowerCase().startsWith('ko')) return 'ko';
-                }
-                return 'en';
+                const primary = (navigator.language || (navigator.languages && navigator.languages[0]) || "").toLowerCase();
+                if (primary.startsWith("ko")) return "ko";
+                return "en";
             }
             const initialLang = detectLang();
             document.documentElement.lang = initialLang;
@@ -245,10 +243,20 @@
                 url.searchParams.set('lang', target);
                 window.history.replaceState({}, '', url.toString());
             }
+            document.querySelectorAll("a[href]").forEach(a => {
+                const href = a.getAttribute("href");
+                if (href && (href.endsWith(".html") || href.includes(".html?")) && !href.startsWith("http") && !href.startsWith("mailto:")) {
+                    try {
+                        const u = new URL(a.href, window.location.href);
+                        u.searchParams.set("lang", target);
+                        a.href = u.pathname + u.search + u.hash;
+                    } catch (e) {}
+                }
+            });
             updateLangButtons(target);
         }
 
-        updateLangButtons(document.documentElement.lang || 'ko');
+        setLang(document.documentElement.lang || 'ko');
     </script>
 </body>
 </html>
