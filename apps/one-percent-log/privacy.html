@@ -644,6 +644,11 @@
         if (urlLang.startsWith("ko")) return "ko";
         if (urlLang.startsWith("en")) return "en";
 
+        try {
+          const saved = localStorage.getItem("saymake_lang");
+          if (saved === "ko" || saved === "en") return saved;
+        } catch (e) {}
+
         const navLangs = (navigator.languages && navigator.languages.length)
           ? navigator.languages
           : [navigator.language || ""];
@@ -659,6 +664,7 @@
       function setLang(lang, updateUrl) {
         const target = (lang === "ko") ? "ko" : "en";
         document.documentElement.lang = target;
+        try { localStorage.setItem("saymake_lang", target); } catch (e) {}
         document.querySelectorAll(".lang-section").forEach((el) => {
           el.classList.toggle("active", el.id === "lang-" + target);
         });
