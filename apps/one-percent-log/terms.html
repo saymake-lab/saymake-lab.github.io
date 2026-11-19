@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>서비스 이용약관 | Terms of Service — 1% 습관로그 (1% Habit Log)</title>
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-wrapper: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --text-main: #334155;
+      --text-header: #0f172a;
+      --text-muted: #64748b;
+      --text-footer: #94a3b8;
+      --primary: #d97706;
+      --primary-soft: rgba(217, 119, 6, 0.1);
+      --border: #e2e8f0;
+      --link: #0284c7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --bg-body: #090d16;
+        --bg-wrapper: #111827;
+        --bg-subtle: #1e293b;
+        --text-main: #cbd5e1;
+        --text-header: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-footer: #64748b;
+        --primary: #fbbf24;
+        --primary-soft: rgba(251, 191, 36, 0.14);
+        --border: #1f2937;
+        --link: #38bdf8;
+      }
+    }
+
+    html.dark {
+      --bg-body: #090d16;
+      --bg-wrapper: #111827;
+      --bg-subtle: #1e293b;
+      --text-main: #cbd5e1;
+      --text-header: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-footer: #64748b;
+      --primary: #fbbf24;
+      --primary-soft: rgba(251, 191, 36, 0.14);
+      --border: #1f2937;
+      --link: #38bdf8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 14px 48px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Hiragino Sans", "Noto Sans JP", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg-wrapper);
+      padding: 28px 24px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .lang-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    h1 { font-size: 22px; font-weight: 900; color: var(--text-header); margin: 0 0 6px; }
+    .updated { font-size: 12px; color: var(--text-muted); margin-bottom: 22px; }
+    h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-header);
+      margin-top: 26px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--primary);
+      padding-left: 9px;
+    }
+    ol, ul { padding-left: 20px; margin: 8px 0; }
+    li { margin-bottom: 7px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-footer);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <a class="brand" href="./index.html">🌱 SayMake Studio · 1% Habit Log</a>
+      <div class="lang-tabs" role="tablist" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        <button type="button" class="lang-btn" data-lang="zh-TW">繁體中文</button>
+        <button type="button" class="lang-btn" data-lang="de">Deutsch</button>
+        <button type="button" class="lang-btn" data-lang="fr">Français</button>
+        <button type="button" class="lang-btn" data-lang="es">Español</button>
+      </div>
+    </div>
+
+    <!-- ==================== KOREAN (ko) ==================== -->
+    <section id="lang-ko" class="lang-section active" lang="ko">
+      <h1>서비스 이용약관 (EULA)</h1>
+      <div class="updated">시행일: 2026년 10월 27일 (최종 개정: 2026년 11월 3일)</div>
+
+      <h2>제1조 (목적)</h2>
+      <p>본 약관은 세이메이크(SayMake, 이하 "회사")가 제공하는 모바일 습관 형성 애플리케이션 <strong>'1% 습관로그'(One-Percent-Log, 이하 "서비스")</strong>의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</p>
+
+      <h2>제2조 (용어의 정의)</h2>
+      <ol>
+        <li>"서비스"란 회사가 제공하는 2분 마중물 규칙 및 1% 복리 성장 원리 기반의 습관 형성 모바일 애플리케이션을 의미합니다.</li>
+        <li>"로컬 저장소"란 외부 서버 통신 없이 이용자의 단말기 내부(SQLite / LocalStorage)에 격리 저장되는 환경을 말합니다.</li>
+        <li>"1% Pro"란 월간 구독, 연간 구독 또는 평생 소장권 인앱 결제를 통해 제공되는 유료 프리미엄 멤버십을 의미합니다.</li>
+      </ol>
+
+      <h2>제3조 (등급별 서비스 제공 범위 및 광고 정책)</h2>
+      <ol>
+        <li><strong>무료 플랜 (Free)</strong>:
+          <ul>
+            <li>최대 3개의 습관 슬롯을 등록할 수 있으며, 원탭 완료 및 기본 2분 시동 타이머, 기본 내레이터 톤이 제공됩니다.</li>
+            <li>습관 문구 수정, 스톱워치 연장 모드, 추가 성우 코칭, 2분 비상모드, 심층 통계 리포트 열람 등 일부 도구 기능은 보상형 또는 전면 광고 시청 후 1회(또는 24시간) 단위로 해금할 수 있습니다.</li>
+            <li><strong>원칙 고지</strong>: 회사는 광고 시청을 대가로 미실행 출석을 소급 인정하거나, 연속 기록(스트릭)을 인위적으로 추가하거나, 무료 습관 슬롯 개수를 늘려주지 않습니다.</li>
+          </ul>
+        </li>
+        <li><strong>유료 플랜 (1% Pro)</strong>:
+          <ul>
+            <li><strong>결제 상품</strong>: 월간 구독, 연간 구독, 평생 소장권(1회 결제) 중 선택할 수 있으며, 국가·통화별 최종 결제 금액은 Apple App Store 및 Google Play 결제 화면에 표시된 가격을 따릅니다.</li>
+            <li><strong>제공 혜택</strong>: 모든 전면·보상형 광고 100% 제거, 습관 슬롯 무제한 생성 및 직접 입력, 전체 성우 페르소나 해금, 54주(6대 시즌) 여정 및 전체 복리 통계 상시 열람, 다중 알람 리마인드, 로컬 데이터 파일 백업·복원 기능을 제공합니다.</li>
+            <li>구독 만료·해지 시에도 기존 달성 기록과 통계 데이터는 삭제되지 않고 보존되며, Free 상태로 전환 시 활성 습관 3개를 유지하고 초과 습관은 보관(읽기 전용) 상태로 유지됩니다.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>제4조 (인앱 결제, 자동 갱신 구독 및 환불)</h2>
+      <ol>
+        <li>모든 유료 결제는 이용자의 Apple ID 또는 Google Play 계정을 통해 각 스토어의 인앱 결제(In-App Purchase) 시스템으로 청구됩니다.</li>
+        <li><strong>자동 갱신 안내</strong>: 월간 구독 및 연간 구독 상품은 현재 구독 기간이 종료되기 최소 <strong>24시간 전</strong>까지 단말기의 구독 설정에서 자동 갱신을 해지하지 않으면 동일한 조건으로 자동 갱신되며, 종료 전 24시간 이내에 갱신 요금이 청구됩니다.</li>
+        <li><strong>구독 관리 및 해지</strong>: 앱을 삭제하더라도 구독은 자동으로 해지되지 않습니다. 이용자는 직접 <code>iOS 설정 &gt; Apple 계정 &gt; 구독</code> 또는 <code>Google Play 스토어 &gt; 결제 및 정기 결제 &gt; 정기 결제</code>에서 언제든 해지할 수 있습니다.</li>
+        <li><strong>청약철회 및 환불</strong>: 결제 취소 및 환불은 Apple App Store 또는 Google Play 스토어 사업자의 약관 및 환불 정책에 따라 각 스토어 고객센터를 통해 처리됩니다.</li>
+        <li><strong>구매 복원</strong>: 기기 변경 또는 앱 재설치 시 앱 내 <code>[이전 구매 내역 복원 (Restore)]</code> 기능을 통해 동일 스토어 계정의 활성 권한을 무료로 복원할 수 있습니다.</li>
+      </ol>
+
+      <h2>제5조 (로컬 데이터 저장 및 백업 책임)</h2>
+      <ol>
+        <li>서비스는 개인정보 보호를 위해 회사의 서버가 아닌 이용자의 단말기 내부에만 습관 기록을 저장합니다.</li>
+        <li>단말기 분실, 파손, OS 초기화 또는 앱 삭제 전에 <code>[설정 &gt; 데이터 백업 &amp; 기기 이전]</code> 기능을 통해 백업 파일을 외부에 직접 보관할 책임은 이용자에게 있으며, 미백업 상태에서 발생한 로컬 데이터 유실에 대해 회사는 고의 또는 중과실이 없는 한 책임을 지지 않습니다.</li>
+      </ol>
+
+      <h2>제6조 (면책사항 — 비의료 서비스 고지)</h2>
+      <p>본 서비스가 제공하는 습관 형성 가이드, 명상·운동·절제 타이머 및 통계 지표는 자기관리 보조 도구일 뿐이며, 의학적 진단·치료·심리상담을 대체하지 않습니다.</p>
+
+      <h2>제7조 (사업자 정보 및 고객지원)</h2>
+      <ul>
+        <li><strong>상호</strong>: 세이메이크 (SayMake)</li>
+        <li><strong>대표자</strong>: 김태진</li>
+        <li><strong>주소</strong>: 서울특별시 강남구 학동로24길 20, 참존빌딩 402호 a600</li>
+        <li><strong>사업자등록번호</strong>: 886-35-01633</li>
+        <li><strong>통신판매업 신고번호</strong>: 2026-서울강남-02689</li>
+        <li><strong>고객지원 이메일</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== ENGLISH (en) ==================== -->
+    <section id="lang-en" class="lang-section" lang="en">
+      <h1>Terms of Service &amp; End User License Agreement (EULA)</h1>
+      <div class="updated">Effective Date: October 27, 2026 (Last Updated: November 3, 2026)</div>
+
+      <h2>1. Purpose</h2>
+      <p>These Terms of Service ("Terms") govern your use of the mobile application <strong>1% Habit Log (One-Percent-Log, the "Service")</strong> provided by SayMake ("Company", "we", or "us"). By downloading or using the Service, you agree to these Terms.</p>
+
+      <h2>2. Service Plans &amp; Ad Unlock Rules</h2>
+      <ol>
+        <li><strong>Free Plan</strong>:
+          <ul>
+            <li>Includes up to 3 active habit slots, one-tap completion, the 2-minute starter timer, and the default narrator voice tone.</li>
+            <li>Certain optional tools (editing habit statements, stopwatch extension, additional voice coaching, 2-minute emergency mode, and weekly deep-dive analytics) may be temporarily unlocked by viewing rewarded or interstitial advertisements.</li>
+            <li><strong>Integrity Rule</strong>: Watching ads never grants fake attendance check-ins, retroactive streak manipulation, or extra free habit slots.</li>
+          </ul>
+        </li>
+        <li><strong>1% Pro Membership (Paid)</strong>:
+          <ul>
+            <li>Available as a <strong>Monthly Subscription</strong>, <strong>Annual Subscription</strong>, or <strong>Lifetime Unlock (one-time non-consumable purchase)</strong> at the local price displayed in the Apple App Store or Google Play checkout sheet.</li>
+            <li>Unlocks 100% ad-free usage, unlimited custom habit slots, all AI voice personas, full 54-week (6-season) roadmap &amp; compounding analytics, custom reminders, and local backup/restore files.</li>
+            <li>If a subscription expires, all historical logs and statistics remain intact on your device; up to 3 chosen habits stay active while additional habits become read-only until renewed.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>3. In-App Purchases, Auto-Renewal &amp; Refunds</h2>
+      <ol>
+        <li>Payment will be charged to your Apple ID or Google Play account at confirmation of purchase.</li>
+        <li><strong>Auto-Renewable Subscriptions</strong>: Monthly and Annual subscriptions automatically renew unless auto-renew is turned off at least <strong>24 hours before the end of the current billing period</strong>. Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+        <li><strong>Managing &amp; Canceling Subscriptions</strong>: Deleting the app does NOT cancel an active subscription. You can manage or cancel auto-renewal anytime in <code>iOS Settings &gt; Apple Account &gt; Subscriptions</code> or <code>Google Play Store &gt; Payments &amp; subscriptions &gt; Subscriptions</code>.</li>
+        <li><strong>Refunds</strong>: All billing and refund requests are handled directly by Apple or Google under their respective store refund policies.</li>
+        <li><strong>Restore Purchases</strong>: You can restore active entitlements on a new or reinstalled device at no extra cost using the in-app <code>[Restore Purchases]</code> button with the same store account.</li>
+      </ol>
+
+      <h2>4. Local Data Storage &amp; User Backups</h2>
+      <ol>
+        <li>To protect your privacy, all habit records are stored exclusively on your device's local database without cloud servers.</li>
+        <li>You are responsible for exporting backup files (<code>.1pl</code> / JSON) via <code>[Settings &gt; Data Backup &amp; Transfer]</code> before changing devices, resetting your OS, or uninstalling the app. Except in cases of willful misconduct or gross negligence, the Company is not liable for data loss caused by unbacked-up device resets or app deletion.</li>
+      </ol>
+
+      <h2>5. Non-Medical Disclaimer</h2>
+      <p>The Service is a self-improvement and productivity tool only and does not provide medical, psychological, or clinical advice, diagnosis, or treatment.</p>
+
+      <h2>6. Company Information &amp; Support</h2>
+      <ul>
+        <li><strong>Company</strong>: SayMake (Representative: Taejin Kim)</li>
+        <li><strong>Address</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republic of Korea</li>
+        <li><strong>Business Registration No.</strong>: 886-35-01633 (KR) · E-Commerce Permit: 2026-SeoulGangnam-02689</li>
+        <li><strong>Support Email</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== JAPANESE (ja) ==================== -->
+    <section id="lang-ja" class="lang-section" lang="ja">
+      <h1>利用規約（EULA）</h1>
+      <div class="updated">施行日：2026年10月27日（最終改定：2026年11月3日）</div>
+
+      <h2>第1条（目的）</h2>
+      <p>本規約は、SayMake（以下「当社」）が提供する習慣形成モバイルアプリ<strong>『1%習慣ログ』（One-Percent-Log、以下「本サービス」）</strong>の利用条件および当社と利用者との間の権利義務関係を定めるものです。</p>
+
+      <h2>第2条（プラン内容および広告解放ルール）</h2>
+      <ol>
+        <li><strong>無料プラン（Free）</strong>：
+          <ul>
+            <li>最大3つの習慣登録、ワンタップ完了、基本の2分始動タイマー、標準ナレーター音声をご利用いただけます。</li>
+            <li>習慣文の編集、ストップウォッチ延長、追加ボイス再生、2分緊急モード、週間分析レポート等の一部ツールは、広告を視聴することで1回（または24時間）解放できます。</li>
+            <li>広告視聴によって未実行の達成記録を追加したり、連続記録を不正に復元したりすることはできません。</li>
+          </ul>
+        </li>
+        <li><strong>有料プラン（1% Pro）</strong>：
+          <ul>
+            <li><strong>月額プラン・年額プラン（自動更新サブスクリプション）</strong>および<strong>買い切りプラン（永久ライセンス）</strong>があり、価格はApp StoreまたはGoogle Playの決済画面に表示される金額となります。</li>
+            <li>すべての広告の完全非表示、習慣数の無制限登録・自由入力、全AI声優トーン解放、54週（全6シーズン）ロードマップ・複利統計の常時閲覧、リマインダー通知、ローカルバックアップ・復元機能が解放されます。</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>第3条（アプリ内課金・自動更新・解約および返金）</h2>
+      <ol>
+        <li>お支払いは購入確認時にAppleアカウントまたはGoogle Playアカウントへ請求されます。</li>
+        <li><strong>自動更新について</strong>：月額・年額サブスクリプションは、現在の購読期間終了の<strong>24時間前まで</strong>に自動更新をオフにしない限り自動的に更新され、期間終了前24時間以内に更新料金が請求されます。</li>
+        <li><strong>解約方法</strong>：アプリを削除しただけでは定期購入は解約されません。<code>iOSの「設定」&gt;「Appleアカウント」&gt;「サブスクリプション」</code>または<code>Google Playストア &gt;「お支払いと定期購入」&gt;「定期購入」</code>からいつでも解約できます。</li>
+        <li><strong>返金および購入の復元</strong>：返金手続きはAppleまたはGoogleの各ストア規定に従います。機種変更や再インストール時はアプリ内の<code>［購入を復元］</code>ボタンから無料で権限を復元できます。</li>
+      </ol>
+
+      <h2>第4条（ローカル保存とバックアップの責任）</h2>
+      <p>本サービスはプライバシー保護のため、すべての習慣データを端末内にのみ保存します。機種変更やアプリ削除の前に<code>［設定 &gt; データバックアップ］</code>からバックアップファイルを保存してください。バックアップを行わずにアプリを削除・初期化したことによるデータ消失について、当社は故意または重過失がない限り責任を負いません。</p>
+
+      <h2>第5条（免責事項）</h2>
+      <p>本サービスは自己管理・習慣化を支援するツールであり、医療行為や医学的アドバイスを提供するものではありません。</p>
+
+      <h2>第6条（事業者情報・お問い合わせ）</h2>
+      <ul>
+        <li><strong>事業者名</strong>：SayMake（代表：Taejin Kim）</li>
+        <li><strong>所在地</strong>：大韓民国 ソウル特別市 江南区 鶴洞路24キル 20 チャムジョンビル402号 a600</li>
+        <li><strong>事業者登録番号</strong>：886-35-01633 ／ 通信販売業届出番号：2026-ソウル江南-02689</li>
+        <li><strong>サポートメール</strong>：<a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== TRADITIONAL CHINESE - TAIWAN (zh-TW) ==================== -->
+    <section id="lang-zh-TW" class="lang-section" lang="zh-Hant">
+      <h1>服務條款（EULA）</h1>
+      <div class="updated">生效日期：2026年10月27日（最後更新：2026年11月3日）</div>
+
+      <h2>第一條（目的）</h2>
+      <p>本服務條款旨在規範您使用由 SayMake（以下簡稱「本公司」）所提供之行動應用程式<strong>《1% 習慣日誌》（One-Percent-Log，以下簡稱「本服務」）</strong>時的權利、義務與相關事項。</p>
+
+      <h2>第二條（方案內容與廣告解鎖規則）</h2>
+      <ol>
+        <li><strong>免費方案（Free）</strong>：
+          <ul>
+            <li>最多可建立 3 個習慣欄位，並提供一鍵完成、基本 2 分鐘啟動計時器與預設旁白語音。</li>
+            <li>修改習慣宣言、碼錶自動延長模式、語音教練、2 分鐘緊急模式與深度週報等部分工具，可透過觀看獎勵或插頁式廣告單次（或 24 小時）解鎖使用。</li>
+            <li>本公司絕不允許透過觀看廣告來補簽未執行的打卡紀錄或偽造連續達成天數。</li>
+          </ul>
+        </li>
+        <li><strong>付費方案（1% Pro）</strong>：
+          <ul>
+            <li>提供<strong>月度訂閱、年度訂閱（自動續訂）</strong>及<strong>終身買斷（一次性購買）</strong>三種選擇，實際價格以 Apple App Store 或 Google Play 結帳畫面顯示之當地幣別金額為準。</li>
+            <li>享有 100% 移除所有廣告、無限習慣欄位與自訂輸入、全套語音角色、54 週（6 大賽季）完整路線圖與複利分析報表、自訂提醒通知，以及本機資料備份與轉移功能。</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>第三條（應用程式內購買、自動續訂、取消與退款）</h2>
+      <ol>
+        <li>所有付費項目將於確認購買時透過您的 Apple ID 或 Google Play 帳戶扣款。</li>
+        <li><strong>自動續訂說明</strong>：月度與年度訂閱除非在當期結束至少 <strong>24 小時前</strong>關閉自動續訂，否則將自動續約，並於當期結束前 24 小時內收取續訂費用。</li>
+        <li><strong>管理與取消訂閱</strong>：直接刪除應用程式並不會自動取消訂閱。請隨時前往 <code>iOS「設定」&gt;「Apple 帳號」&gt;「訂閱項目」</code> 或 <code>Google Play 商店 &gt;「付款與訂閱」&gt;「訂閱」</code> 進行管理或取消。</li>
+        <li><strong>退款與恢復購買</strong>：退款申請悉依 Apple App Store 或 Google Play 商店之退款政策辦理。更換裝置或重新安裝時，可透過應用程式內之 <code>［恢復購買（Restore）］</code> 按鈕免費恢復既有權限。</li>
+      </ol>
+
+      <h2>第四條（本機資料儲存與備份責任）</h2>
+      <p>為保障隱私，本服務將所有習慣數據儲存在您的手機內部資料庫，不設雲端伺服器。請於更換手機、重置系統或刪除應用程式前，透過 <code>［設定 &gt; 資料備份與轉移］</code> 自行匯出並妥善保存備份檔案。若未備份即刪除應用程式導致資料遺失，除本公司有故意或重大過失外，恕不負賠償責任。</p>
+
+      <h2>第五條（免責聲明）</h2>
+      <p>本服務僅為協助個人習慣養成與自我管理之工具，不構成任何醫療診斷、心理治療或專業醫療建議。</p>
+
+      <h2>第六條（開發商資訊與客服聯絡）</h2>
+      <ul>
+        <li><strong>開發商</strong>：SayMake（代表人：Taejin Kim）</li>
+        <li><strong>地址</strong>：#402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republic of Korea</li>
+        <li><strong>商業登記號碼</strong>：886-35-01633（韓國）</li>
+        <li><strong>客服信箱</strong>：<a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== GERMAN (de) ==================== -->
+    <section id="lang-de" class="lang-section" lang="de">
+      <h1>Nutzungsbedingungen (EULA)</h1>
+      <div class="updated">Gültig ab: 27. Oktober 2026 (Letzte Aktualisierung: 4. November 2026)</div>
+
+      <h2>1. Geltungsbereich</h2>
+      <p>Diese Nutzungsbedingungen regeln die Nutzung der mobilen App <strong>1% Habit Log (der „Dienst“)</strong> von SayMake („wir“). Mit dem Herunterladen oder der Nutzung der App stimmen Sie diesen Bedingungen zu.</p>
+
+      <h2>2. Tarife (Free &amp; 1% Pro)</h2>
+      <ol>
+        <li><strong>Kostenloser Tarif (Free)</strong>: Bis zu 3 aktive Gewohnheiten, 2-Minuten-Starter-Timer und Standard-Sprachstil. Optionale Werkzeuge können punktuell durch das Ansehen von Werbeanzeigen freigeschaltet werden (niemals jedoch künstliche Serien- oder Anwesenheitseinträge).</li>
+        <li><strong>1% Pro-Mitgliedschaft</strong>: Verfügbar als Monatsabo, Jahresabo oder Einmalkauf (Lifetime) zum im jeweiligen Store angezeigten Preis. Schaltet 100 % Werbefreiheit, unbegrenzte Gewohnheiten, alle Sprachstile, den kompletten 54-Wochen-Fahrplan sowie lokale Backup-Dateien frei.</li>
+      </ol>
+
+      <h2>3. In-App-Käufe, Automatische Verlängerung &amp; Kündigung</h2>
+      <ol>
+        <li>Die Abrechnung erfolgt über Ihr Apple-ID- bzw. Google-Play-Konto nach Kaufbestätigung.</li>
+        <li><strong>Automatische Verlängerung</strong>: Monats- und Jahresabonnements verlängern sich automatisch, sofern die automatische Verlängerung nicht mindestens <strong>24 Stunden vor Ablauf des aktuellen Abrechnungszeitraums</strong> deaktiviert wird.</li>
+        <li><strong>Verwaltung &amp; Kündigung</strong>: Das Löschen der App kündigt kein Abonnement. Sie können Ihr Abo jederzeit unter <code>iOS Einstellungen &gt; Apple Account &gt; Abonnements</code> oder <code>Google Play Store &gt; Zahlungen &amp; Abos &gt; Abos</code> kündigen.</li>
+        <li><strong>Widerruf, Erstattung &amp; Wiederherstellung</strong>: Rückerstattungen richten sich nach den Store-Bedingungen von Apple bzw. Google. Über <code>[Käufe wiederherstellen]</code> können bestehende Berechtigungen kostenlos wiederhergestellt werden.</li>
+      </ol>
+
+      <h2>4. Lokale Datenspeicherung &amp; Haftungshinweis</h2>
+      <p>Alle Gewohnheitsdaten werden ausschließlich lokal auf Ihrem Gerät gespeichert. Bitte sichern Sie Ihre Daten vor einem Gerätewechsel über die integrierte Backup-Funktion (<code>.1pl</code> / JSON). Der Dienst dient ausschließlich der Selbstorganisation und stellt keine medizinische oder therapeutische Beratung dar.</p>
+
+      <h2>5. Anbieterkennzeichnung &amp; Support</h2>
+      <ul>
+        <li><strong>Anbieter</strong>: SayMake (Inhaber: Taejin Kim)</li>
+        <li><strong>Anschrift</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republik Korea (Reg.-Nr.: 886-35-01633)</li>
+        <li><strong>Support</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== FRENCH (fr) ==================== -->
+    <section id="lang-fr" class="lang-section" lang="fr">
+      <h1>Conditions d'utilisation (CLUF / EULA)</h1>
+      <div class="updated">Date d'entrée en vigueur : 27 octobre 2026 (Dernière mise à jour : 4 novembre 2026)</div>
+
+      <h2>1. Objet</h2>
+      <p>Les présentes Conditions régissent l'utilisation de l'application mobile <strong>1% Habit Log (le « Service »)</strong> éditée par SayMake (« nous »).</p>
+
+      <h2>2. Formules Gratuite &amp; 1% Pro</h2>
+      <ol>
+        <li><strong>Formule Gratuite (Free)</strong> : Jusqu'à 3 habitudes actives et minuteur de démarrage de 2 minutes. Certains outils ponctuels peuvent être débloqués en visionnant une publicité (sans jamais altérer ni ajouter artificiellement de fausses validations).</li>
+        <li><strong>Abonnement 1% Pro</strong> : Proposé en formule mensuelle, annuelle ou accès à vie (achat unique) au tarif affiché dans l'App Store ou Google Play. Inclut la suppression totale des publicités, les habitudes illimitées, toutes les voix, le parcours de 54 semaines et la sauvegarde locale.</li>
+      </ol>
+
+      <h2>3. Achats intégrés, Renouvellement automatique &amp; Résiliation</h2>
+      <ol>
+        <li>Le paiement est débité sur votre compte Apple ID ou Google Play lors de la confirmation d'achat.</li>
+        <li><strong>Renouvellement automatique</strong> : Les abonnements mensuels et annuels se renouvellent automatiquement sauf annulation au moins <strong>24 heures avant la fin de la période en cours</strong>.</li>
+        <li><strong>Gestion et résiliation</strong> : La suppression de l'application ne résilie pas l'abonnement. Gérez ou annulez à tout moment dans <code>Réglages iOS &gt; Compte Apple &gt; Abonnements</code> ou <code>Google Play Store &gt; Paiements et abonnements &gt; Abonnements</code>.</li>
+        <li><strong>Restauration et remboursement</strong> : Utilisez le bouton <code>[Restaurer les achats]</code> lors d'un changement d'appareil. Les demandes de remboursement sont traitées par Apple ou Google selon leurs conditions respectives.</li>
+      </ol>
+
+      <h2>4. Stockage local &amp; Avertissement non médical</h2>
+      <p>Vos données étant stockées uniquement en local sur votre appareil, il vous appartient d'exporter un fichier de sauvegarde avant toute réinitialisation ou changement de téléphone. Ce Service est un outil de productivité personnelle et ne remplace aucun avis médical.</p>
+
+      <h2>5. Mentions légales &amp; Contact</h2>
+      <ul>
+        <li><strong>Éditeur</strong> : SayMake (Représentant : Taejin Kim · N° d'entreprise : 886-35-01633)</li>
+        <li><strong>Adresse</strong> : #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Séoul, République de Corée</li>
+        <li><strong>Support</strong> : <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== SPANISH (es) ==================== -->
+    <section id="lang-es" class="lang-section" lang="es">
+      <h1>Términos de Servicio (EULA)</h1>
+      <div class="updated">Fecha de entrada en vigor: 27 de octubre de 2026 (Última actualización: 4 de noviembre de 2026)</div>
+
+      <h2>1. Objeto</h2>
+      <p>Estos Términos regulan el uso de la aplicación móvil <strong>1% Habit Log (el «Servicio»)</strong> proporcionada por SayMake («nosotros»).</p>
+
+      <h2>2. Planes Gratuito y 1% Pro</h2>
+      <ol>
+        <li><strong>Plan Gratuito (Free)</strong>: Permite hasta 3 hábitos activos y el temporizador de inicio de 2 minutos. Algunas herramientas opcionales pueden desbloquearse temporalmente viendo anuncios (nunca se otorgan registros ni rachas falsas por ver anuncios).</li>
+        <li><strong>Membresía 1% Pro</strong>: Disponible como suscripción mensual, suscripción anual o compra única de por vida al precio mostrado en App Store o Google Play. Desbloquea uso 100 % sin anuncios, hábitos ilimitados, todas las voces, la ruta completa de 54 semanas y copias de seguridad locales.</li>
+      </ol>
+
+      <h2>3. Compras integradas, Renovación automática y Cancelación</h2>
+      <ol>
+        <li>El pago se cargará a tu cuenta de Apple ID o Google Play al confirmar la compra.</li>
+        <li><strong>Renovación automática</strong>: Las suscripciones mensuales y anuales se renuevan automáticamente a menos que se desactive la renovación al menos <strong>24 horas antes de que finalice el periodo actual</strong>.</li>
+        <li><strong>Gestión y cancelación</strong>: Eliminar la app no cancela la suscripción. Puedes cancelarla en cualquier momento desde <code>Ajustes de iOS &gt; Cuenta de Apple &gt; Suscripciones</code> o <code>Google Play Store &gt; Pagos y suscripciones &gt; Suscripciones</code>.</li>
+        <li><strong>Restauración y reembolsos</strong>: Usa <code>[Restaurar compras]</code> al cambiar de teléfono sin costo adicional. Los reembolsos se rigen por las políticas de Apple o Google.</li>
+      </ol>
+
+      <h2>4. Almacenamiento local y Aviso no médico</h2>
+      <p>Todos los registros se almacenan únicamente en tu dispositivo. Te recomendamos exportar tu archivo de respaldo antes de cambiar o restablecer tu teléfono. Esta aplicación es una herramienta de autogestión y no sustituye asesoramiento médico ni psicológico.</p>
+
+      <h2>5. Información de la empresa y Soporte</h2>
+      <ul>
+        <li><strong>Empresa</strong>: SayMake (Representante: Taejin Kim · Registro comercial: 886-35-01633)</li>
+        <li><strong>Dirección</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seúl, República de Corea</li>
+        <li><strong>Correo de soporte</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      <span>© 2026 SayMake Studio · 1% Habit Log</span>
+      <span><a href="./privacy.html">개인정보처리방침 / Privacy</a> · <a href="./index.html">고객지원 / Support</a></span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const theme = params.get('theme');
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+      else if (theme === 'light') document.documentElement.classList.add('light');
+
+      const supported = ['ko', 'en', 'ja', 'zh-TW', 'de', 'fr', 'es'];
+      function normalizeLang(raw) {
+        if (!raw) return null;
+        const lower = raw.toLowerCase();
+        if (lower.startsWith('ko')) return 'ko';
+        if (lower.startsWith('ja')) return 'ja';
+        if (lower.startsWith('zh')) return 'zh-TW';
+        if (lower.startsWith('de')) return 'de';
+        if (lower.startsWith('fr')) return 'fr';
+        if (lower.startsWith('es')) return 'es';
+        if (lower.startsWith('en')) return 'en';
+        return null;
+      }
+
+      function setLang(lang, updateUrl) {
+        if (!supported.includes(lang)) lang = 'ko';
+        document.documentElement.lang = lang === 'zh-TW' ? 'zh-Hant' : lang;
+        document.querySelectorAll('.lang-section').forEach((el) => {
+          el.classList.toggle('active', el.id === 'lang-' + lang);
+        });
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+        if (updateUrl && window.history && window.history.replaceState) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('lang', lang);
+          window.history.replaceState({}, '', url.toString());
+        }
+      }
+
+      const initial = normalizeLang(params.get('lang')) || normalizeLang(navigator.language) || 'ko';
+      setLang(initial, false);
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          setLang(this.getAttribute('data-lang'), true);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

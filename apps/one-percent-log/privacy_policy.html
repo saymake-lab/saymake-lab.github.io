@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>개인정보처리방침 | Privacy Policy — 1% 습관로그 (1% Habit Log)</title>
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-wrapper: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --text-main: #334155;
+      --text-header: #0f172a;
+      --text-muted: #64748b;
+      --text-footer: #94a3b8;
+      --primary: #d97706;
+      --primary-soft: rgba(217, 119, 6, 0.1);
+      --border: #e2e8f0;
+      --link: #0284c7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --bg-body: #090d16;
+        --bg-wrapper: #111827;
+        --bg-subtle: #1e293b;
+        --text-main: #cbd5e1;
+        --text-header: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-footer: #64748b;
+        --primary: #fbbf24;
+        --primary-soft: rgba(251, 191, 36, 0.14);
+        --border: #1f2937;
+        --link: #38bdf8;
+      }
+    }
+
+    html.dark {
+      --bg-body: #090d16;
+      --bg-wrapper: #111827;
+      --bg-subtle: #1e293b;
+      --text-main: #cbd5e1;
+      --text-header: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-footer: #64748b;
+      --primary: #fbbf24;
+      --primary-soft: rgba(251, 191, 36, 0.14);
+      --border: #1f2937;
+      --link: #38bdf8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 14px 48px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Hiragino Sans", "Noto Sans JP", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg-wrapper);
+      padding: 28px 24px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .lang-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .lang-btn.active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text-header);
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .updated {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+    .callout {
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--primary);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-header);
+      margin-top: 26px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--primary);
+      padding-left: 9px;
+    }
+    ol, ul { padding-left: 20px; margin: 8px 0; }
+    li { margin-bottom: 7px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--bg-subtle);
+      color: var(--text-header);
+      font-weight: 800;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-footer);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <a class="brand" href="./index.html">🌱 SayMake Studio · 1% Habit Log</a>
+      <div class="lang-tabs" role="tablist" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+        <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        <button type="button" class="lang-btn" data-lang="zh-TW">繁體中文</button>
+        <button type="button" class="lang-btn" data-lang="de">Deutsch</button>
+        <button type="button" class="lang-btn" data-lang="fr">Français</button>
+        <button type="button" class="lang-btn" data-lang="es">Español</button>
+      </div>
+    </div>
+
+    <!-- ==================== KOREAN (ko) ==================== -->
+    <section id="lang-ko" class="lang-section active" lang="ko">
+      <h1>개인정보처리방침</h1>
+      <div class="updated">시행일: 2026년 10월 27일 (최종 개정: 2026년 11월 3일)</div>
+
+      <div class="callout">
+        <strong>핵심 요약:</strong> '1% 습관로그'는 회원가입이 없는 <strong>100% 로컬 저장(Server-Free)</strong> 앱입니다. 이용자가 작성한 습관 선언문, 실행 시간, 출석 기록은 당사 서버로 전송되지 않으며 오직 이용자의 스마트폰 내부에만 저장됩니다.
+      </div>
+
+      <p>세이메이크(SayMake, 이하 "회사")는 모바일 애플리케이션 <strong>'1% 습관로그'(One-Percent-Log, 패키지명: <code>com.saymake.onepercentlog</code>, 이하 "서비스")</strong> 이용자의 개인정보를 소중히 여기며, 「개인정보 보호법」 및 글로벌 스토어(Google Play, Apple App Store) 개인정보 보호 정책을 준수합니다.</p>
+
+      <h2>1. 로컬 저장 원칙 및 비수집 정보 (Server-Free 아키텍처)</h2>
+      <ol>
+        <li>본 서비스는 별도의 회원가입, 로그인, 이메일·전화번호·이름·위치정보 수집 절차가 없습니다.</li>
+        <li>이용자가 생성한 습관 내용(언제·어디서·무엇을), 타이머 측정 기록, 연속 달성 기록(스트릭), 정체성 투표 수, 설정값 등 <strong>모든 습관 활동 데이터는 이용자의 단말기 내부 저장소(SQLite / LocalStorage)에만 격리 보관</strong>되며 회사의 중앙 서버로 전송·저장되지 않습니다.</li>
+        <li>단말기 내 알림(리마인드) 역시 외부 푸시 서버를 거치지 않는 <strong>로컬 알림(Local Notifications)</strong> 방식으로만 동작합니다.</li>
+      </ol>
+
+      <h2>2. 제3자 SDK를 통해 처리되는 정보 항목 및 목적</h2>
+      <p>회사는 유료 멤버십 결제 검증 및 무료 버전의 광고 제공을 위해 신뢰할 수 있는 제3자 전문 SDK를 사용하며, 아래 범위 내에서만 비식별 기술 정보가 처리됩니다.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>제공받는 자 (SDK)</th>
+            <th>처리 항목</th>
+            <th>이용 목적</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a></td>
+            <td>익명 앱 사용자 식별자(Anonymous App User ID), 스토어 구매 영수증 및 구독 상태 정보, 기기·앱 버전 정보</td>
+            <td>인앱 결제(1% Pro 구독·평생권) 유효성 검증, 구독 갱신 상태 확인, 기기 변경 시 [구매 내역 복원] 처리</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a></td>
+            <td>광고 식별자(Android GAID / iOS IDFA — 권한 허용 시), IP 기반 대략적 지역, 광고 노출·클릭 등 상호작용 로그, 기기 진단 정보</td>
+            <td>무료(Free) 이용자의 도구 기능 해금용 보상형·전면 광고 송출, 광고 성과 측정 및 부정 클릭 방지</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>※ 실제 결제 수단(신용카드 번호, 계좌 정보 등)은 Apple App Store 및 Google Play 결제 시스템에서 직접 처리되며, 회사는 결제 금융 정보를 일체 열람하거나 보관하지 않습니다.</p>
+
+      <h2>3. 광고 식별자(IDFA/GAID) 및 맞춤형 광고 거부 방법</h2>
+      <p>이용자는 언제든지 단말기 설정을 통해 광고 추적 및 맞춤형 광고 수신을 제한하거나 초기화할 수 있습니다.</p>
+      <ul>
+        <li><strong>iOS (iPhone/iPad)</strong>: 앱 최초 실행 시 표시되는 앱 추적 투명성(ATT) 권한 창에서 '추적 금지 요청'을 선택하거나, <code>설정 &gt; 개인정보 보호 및 보안 &gt; 추적</code>에서 언제든 권한을 철회할 수 있습니다.</li>
+        <li><strong>Android</strong>: <code>설정 &gt; Google &gt; 모든 서비스 &gt; 광고</code>에서 '광고 ID 재설정' 또는 '광고 ID 삭제'를 선택할 수 있습니다.</li>
+      </ul>
+
+      <h2>4. 데이터 보유·파기 및 이용자의 권리</h2>
+      <ol>
+        <li><strong>로컬 데이터의 즉시 파기</strong>: 회사는 별도의 회원 계정을 운영하지 않으므로, 이용자가 앱을 삭제하거나 단말기 설정에서 '데이터 삭제'를 실행하면 기기 내 모든 습관 및 통계 데이터는 즉시 영구 파기됩니다.</li>
+        <li><strong>백업 파일 관리</strong>: 이용자가 <code>[설정 &gt; 데이터 백업 &amp; 기기 이전]</code> 기능을 통해 직접 내보낸 백업 파일(<code>.1pl</code> / JSON)은 이용자가 선택한 경로(기기 폴더, 클라우드 드라이브 등)에 보관되며, 회사 서버를 거치지 않습니다.</li>
+      </ol>
+
+      <h2>5. 아동의 개인정보 보호</h2>
+      <p>본 서비스는 만 13세(대한민국 기준 만 14세) 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+      <h2>6. 개인정보 보호책임자 및 문의처</h2>
+      <ul>
+        <li><strong>상호</strong>: 세이메이크 (SayMake)</li>
+        <li><strong>개인정보 보호책임자</strong>: 김태진 (대표)</li>
+        <li><strong>주소</strong>: 서울특별시 강남구 학동로24길 20, 참존빌딩 402호 a600</li>
+        <li><strong>이메일</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== ENGLISH (en) ==================== -->
+    <section id="lang-en" class="lang-section" lang="en">
+      <h1>Privacy Policy</h1>
+      <div class="updated">Effective Date: October 27, 2026 (Last Updated: November 3, 2026)</div>
+
+      <div class="callout">
+        <strong>Privacy Highlights:</strong> <strong>1% Habit Log</strong> is a <strong>100% Local-First, Server-Free</strong> app with no sign-up required. Your habit declarations, timer sessions, streaks, and notes stay exclusively on your device and are never uploaded to our servers.
+      </div>
+
+      <p>SayMake ("Company", "we", "us", or "our") values your privacy in operating the mobile application <strong>1% Habit Log (One-Percent-Log, Bundle/Package ID: <code>com.saymake.onepercentlog</code>, the "Service")</strong> and complies with applicable privacy laws including GDPR, CCPA, and Google Play / Apple App Store policies.</p>
+
+      <h2>1. Local-First Principle &amp; Data We Do NOT Collect</h2>
+      <ol>
+        <li>The Service requires <strong>no account registration or login</strong>. We do not collect your name, email address, phone number, contacts, or precise GPS location.</li>
+        <li>All habit declarations (When / Where / What), timer durations, attendance logs, streaks, and identity votes are stored <strong>solely in your device's local database (SQLite / LocalStorage)</strong> and are never transmitted to any Company server.</li>
+        <li>Habit reminders operate purely via on-device <strong>Local Notifications</strong> without external push servers.</li>
+      </ol>
+
+      <h2>2. Information Processed via Third-Party SDKs</h2>
+      <p>To verify in-app purchases and provide ads on the Free tier, the Service integrates the following trusted third-party SDKs, which process limited technical data encrypted in transit (HTTPS/TLS):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Provider (SDK)</th>
+            <th>Data Processed</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></td>
+            <td>Anonymous App User ID, App Store / Google Play purchase receipts &amp; subscription status, app/device version</td>
+            <td>Validating 1% Pro subscriptions and lifetime purchases, managing entitlements, and processing [Restore Purchases]</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></td>
+            <td>Advertising ID (Android GAID / iOS IDFA when permitted), coarse IP region, ad impression/interaction logs, device diagnostics</td>
+            <td>Serving rewarded &amp; interstitial ads to unlock Free-tier tools, ad measurement, and fraud prevention</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>Note: All payment transactions are processed directly by Apple App Store or Google Play. We never access or store your credit card or billing details.</em></p>
+
+      <h2>3. Advertising Identifiers &amp; Tracking Controls (ATT / Opt-Out)</h2>
+      <ul>
+        <li><strong>iOS / iPadOS</strong>: You may decline tracking in the iOS App Tracking Transparency (ATT) prompt or revoke permission anytime under <code>Settings &gt; Privacy &amp; Security &gt; Tracking</code>.</li>
+        <li><strong>Android</strong>: You may reset or delete your Advertising ID anytime under <code>Settings &gt; Google &gt; All services &gt; Ads</code>.</li>
+        <li>Upgrading to <strong>1% Pro</strong> permanently disables all AdMob ad requests in the app.</li>
+      </ul>
+
+      <h2>4. Data Retention, Backup &amp; Deletion Rights</h2>
+      <ol>
+        <li><strong>Immediate Deletion</strong>: Because we maintain no user accounts or cloud databases, uninstalling the app or clearing app storage in your device settings permanently and immediately deletes all local habit data.</li>
+        <li><strong>User-Controlled Backups</strong>: Backup files (<code>.1pl</code> / JSON) exported via <code>[Settings &gt; Data Backup &amp; Transfer]</code> are saved directly to the storage location you choose (device files, iCloud Drive, Google Drive, etc.) without passing through our servers.</li>
+      </ol>
+
+      <h2>5. Children's Privacy</h2>
+      <p>The Service is not directed to children under the age of 13 (or the minimum age required by local law), and we do not knowingly collect personal information from children.</p>
+
+      <h2>6. Contact Us</h2>
+      <ul>
+        <li><strong>Developer / Company</strong>: SayMake</li>
+        <li><strong>Privacy Officer</strong>: Taejin Kim</li>
+        <li><strong>Address</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republic of Korea</li>
+        <li><strong>Email</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== JAPANESE (ja) ==================== -->
+    <section id="lang-ja" class="lang-section" lang="ja">
+      <h1>プライバシーポリシー</h1>
+      <div class="updated">施行日：2026年10月27日（最終改定：2026年11月3日）</div>
+
+      <div class="callout">
+        <strong>要点：</strong>『1%習慣ログ』は会員登録不要の<strong>100%ローカル保存型（サーバーレス）</strong>アプリです。作成した習慣宣言・タイマー記録・達成ログが当社サーバーへ送信されることは一切なく、すべてお客様の端末内にのみ保存されます。
+      </div>
+
+      <p>SayMake（以下「当社」）は、モバイルアプリ<strong>『1%習慣ログ』（One-Percent-Log、パッケージID：<code>com.saymake.onepercentlog</code>、以下「本サービス」）</strong>における利用者のプライバシーを尊重し、個人情報保護法およびApp Store・Google Playの規約を遵守します。</p>
+
+      <h2>1. 端末内ローカル保存の原則（収集しない情報）</h2>
+      <ol>
+        <li>本サービスにはアカウント登録・ログイン機能はなく、氏名・メールアドレス・電話番号・位置情報（GPS）等を収集しません。</li>
+        <li>お客様が登録した習慣内容（いつ・どこで・何を）、タイマー実行時間、連続記録、アイデンティティ投票数などのデータは<strong>端末内データベース（SQLite / LocalStorage）にのみ保存</strong>され、外部サーバーへ送信されません。</li>
+        <li>リマインダー通知も外部プッシュサーバーを介さない端末内の<strong>ローカル通知</strong>として動作します。</li>
+      </ol>
+
+      <h2>2. 第三者SDKを通じて処理される情報と利用目的</h2>
+      <p>有料プランの購入確認および無料プランでの広告配信のため、以下の信頼できる第三者SDKを利用しており、通信はすべて暗号化（HTTPS/TLS）されます。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>提供先（SDK）</th>
+            <th>処理される項目</th>
+            <th>利用目的</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a></td>
+            <td>匿名アプリユーザーID、ストア購入レシート・購読状態、端末・アプリバージョン情報</td>
+            <td>1% Pro（月額・年額・買い切り）の決済確認、権限管理、機種変更時の［購入を復元］処理</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a></td>
+            <td>広告識別子（Android GAID / iOS IDFA ※許可時）、IPに基づくおおよその地域、広告表示・操作ログ、診断情報</td>
+            <td>無料プランにおける機能解放用リワード広告・インタースティシャル広告の配信および不正防止</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>※ クレジットカード等の決済情報はApple App StoreまたはGoogle Playで直接処理され、当社が保持・閲覧することはありません。</p>
+
+      <h2>3. 広告識別子（IDFA/GAID）およびトラッキングの制限方法</h2>
+      <ul>
+        <li><strong>iOS</strong>：初回起動時のトラッキング許可（ATT）ダイアログで「Appにトラッキングしないように要求」を選択するか、<code>設定 &gt; プライバシーとセキュリティ &gt; トラッキング</code>からいつでもオフにできます。</li>
+        <li><strong>Android</strong>：<code>設定 &gt; Google &gt; すべてのサービス &gt; 広告</code>から広告IDのリセットまたは削除が可能です。</li>
+      </ul>
+
+      <h2>4. データの保持・バックアップおよび削除</h2>
+      <ol>
+        <li><strong>即時削除</strong>：当社サーバーにアカウントデータは存在しないため、アプリをアンインストールするか端末設定からストレージを消去すると、すべての記録が即座に完全削除されます。</li>
+        <li><strong>バックアップ管理</strong>：<code>［設定 &gt; データバックアップ］</code>で書き出したファイル（<code>.1pl</code> / JSON）は、お客様自身が選択した保存先（端末やクラウドドライブ等）にのみ保管されます。</li>
+      </ol>
+
+      <h2>5. お子様のプライバシー</h2>
+      <p>本サービスは13歳未満のお子様を対象としておらず、意図的に個人情報を収集することはありません。</p>
+
+      <h2>6. お問い合わせ窓口</h2>
+      <ul>
+        <li><strong>事業者名</strong>：SayMake（セイメイク）</li>
+        <li><strong>個人情報保護管理者</strong>：Taejin Kim（キム・テジン）</li>
+        <li><strong>所在地</strong>：大韓民国 ソウル特別市 江南区 鶴洞路24キル 20 チャムジョンビル402号 a600</li>
+        <li><strong>メール</strong>：<a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== TRADITIONAL CHINESE - TAIWAN (zh-TW) ==================== -->
+    <section id="lang-zh-TW" class="lang-section" lang="zh-Hant">
+      <h1>隱私權政策</h1>
+      <div class="updated">生效日期：2026年10月27日（最後更新：2026年11月3日）</div>
+
+      <div class="callout">
+        <strong>重點摘要：</strong>《1% 習慣日誌》是一款<strong>免註冊、100% 本機儲存（無伺服器）</strong>的應用程式。您建立的習慣宣言、計時紀錄與打卡數據僅保存在您的手機內部，絕不會上傳至本公司伺服器。
+      </div>
+
+      <p>SayMake（以下簡稱「本公司」）非常重視<strong>《1% 習慣日誌》（One-Percent-Log，應用程式 ID：<code>com.saymake.onepercentlog</code>，以下簡稱「本服務」）</strong>使用者的個人資料保護，並遵守相關個人資料保護法規與 Google Play、Apple App Store 規範。</p>
+
+      <h2>1. 本機儲存原則與不蒐集之資料</h2>
+      <ol>
+        <li>本服務<strong>無需註冊帳號或登入</strong>，不會蒐集您的姓名、電子郵件、電話號碼、通訊錄或精確 GPS 位置。</li>
+        <li>您設定的習慣內容（何時、何地、做什麼）、計時長度、連續達成紀錄與身分認同投票數，<strong>全部僅隔離儲存在您的裝置內部資料庫（SQLite / LocalStorage）</strong>，不會傳送至本公司伺服器。</li>
+        <li>任務提醒通知亦採用裝置端<strong>本機通知（Local Notifications）</strong>運作，不經由外部推播伺服器。</li>
+      </ol>
+
+      <h2>2. 透過第三方 SDK 處理之資訊與目的</h2>
+      <p>為驗證應用程式內購買項目及提供免費版廣告解鎖功能，本服務整合以下受信任之第三方 SDK，相關技術資料於傳輸過程皆經加密（HTTPS/TLS）保護：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>第三方服務（SDK）</th>
+            <th>處理項目</th>
+            <th>使用目的</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">隱私權政策</a></td>
+            <td>匿名應用程式使用者 ID、商店購買收據與訂閱狀態、裝置與應用程式版本資訊</td>
+            <td>驗證 1% Pro（月訂、年訂、終身買斷）購買權限，並提供更換手機時的［恢復購買］功能</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隱私權政策</a></td>
+            <td>廣告識別碼（Android GAID / iOS IDFA，經授權時）、IP 大致地區、廣告曝光與互動紀錄、診斷資訊</td>
+            <td>向免費版（Free）使用者提供解鎖工具所需之獎勵廣告與插頁式廣告、廣告成效衡量及防範詐欺</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>※ 所有付款交易均由 Apple App Store 或 Google Play 直接處理，本公司不會存取或保存您的信用卡等付款資訊。</p>
+
+      <h2>3. 廣告識別碼（IDFA/GAID）與追蹤控制</h2>
+      <ul>
+        <li><strong>iOS</strong>：您可於首次啟動時的「App 追蹤透明度（ATT）」視窗選擇「要求 App 不要追蹤」，或隨時至 <code>設定 &gt; 隱私權與安全性 &gt; 追蹤</code> 關閉權限。</li>
+        <li><strong>Android</strong>：您可隨時至 <code>設定 &gt; Google &gt; 所有服務 &gt; 廣告</code> 重設或刪除廣告 ID。</li>
+      </ul>
+
+      <h2>4. 資料保存、備份與刪除權利</h2>
+      <ol>
+        <li><strong>立即刪除</strong>：由於本公司不設雲端會員資料庫，當您解除安裝本應用程式或於手機設定中「清除資料」時，裝置內所有習慣與統計數據將立即永久銷毀。</li>
+        <li><strong>備份檔案管理</strong>：您透過 <code>［設定 &gt; 資料備份與轉移］</code> 匯出之備份檔（<code>.1pl</code> / JSON）僅儲存在您自行選擇的位置（如手機資料夾或個人雲端硬碟），不會經過本公司伺服器。</li>
+      </ol>
+
+      <h2>5. 兒童隱私保護</h2>
+      <p>本服務並非針對未滿 13 歲之兒童設計，亦不會故意蒐集兒童之個人資料。</p>
+
+      <h2>6. 聯絡我們</h2>
+      <ul>
+        <li><strong>開發商</strong>：SayMake</li>
+        <li><strong>隱私保護負責人</strong>：Taejin Kim</li>
+        <li><strong>地址</strong>：#402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republic of Korea</li>
+        <li><strong>聯絡信箱</strong>：<a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== GERMAN (de) ==================== -->
+    <section id="lang-de" class="lang-section" lang="de">
+      <h1>Datenschutzerklärung</h1>
+      <div class="updated">Gültig ab: 27. Oktober 2026 (Letzte Aktualisierung: 4. November 2026)</div>
+
+      <div class="callout">
+        <strong>Kurzfassung:</strong> <strong>1% Habit Log</strong> ist eine <strong>100 % lokale („Local-First“) App ohne Registrierung</strong>. Ihre Gewohnheiten, Timer-Zeiten und Fortschritte verbleiben ausschließlich auf Ihrem Gerät und werden niemals auf unsere Server hochgeladen.
+      </div>
+
+      <p>SayMake („wir“ oder „Unternehmen“) nimmt den Schutz Ihrer personenbezogenen Daten in der mobilen Anwendung <strong>1% Habit Log (Paket-ID: <code>com.saymake.onepercentlog</code>, der „Dienst“)</strong> sehr ernst und erfüllt die Vorgaben der DSGVO (GDPR) sowie die Richtlinien von Google Play und Apple App Store.</p>
+
+      <h2>1. Lokale Speicherung &amp; nicht erhobene Daten</h2>
+      <ol>
+        <li>Für die Nutzung ist <strong>kein Benutzerkonto und keine Anmeldung</strong> erforderlich. Wir erheben weder Namen, E-Mail-Adressen, Telefonnummern noch GPS-Standortdaten.</li>
+        <li>Alle Gewohnheitserklärungen (Wann / Wo / Was), Timer-Protokolle, Serien (Streaks) und Identitätsstimmen werden <strong>ausschließlich lokal auf Ihrem Endgerät (SQLite / LocalStorage)</strong> gespeichert.</li>
+        <li>Erinnerungen funktionieren rein lokal über <strong>Geräte-Mitteilungen (Local Notifications)</strong> ohne externe Push-Server.</li>
+      </ol>
+
+      <h2>2. Datenverarbeitung durch Drittanbieter-SDKs &amp; Rechtsgrundlage (DSGVO)</h2>
+      <p>Zur Überprüfung von In-App-Käufen (Art. 6 Abs. 1 lit. b DSGVO) und zur Ausspielung von Werbung in der kostenlosen Version (Art. 6 Abs. 1 lit. a/f DSGVO) werden folgende Drittanbieter-SDKs eingesetzt (alle Übertragungen erfolgen TLS-verschlüsselt):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Anbieter (SDK)</th>
+            <th>Verarbeitete Daten</th>
+            <th>Zweck</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Datenschutz</a></td>
+            <td>Anonyme App-User-ID, Kaufbelege (App Store / Google Play), Abo-Status, App-/Geräteversion</td>
+            <td>Validierung von 1% Pro-Käufen und Wiederherstellung von Käufen ([Käufe wiederherstellen])</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutz</a></td>
+            <td>Werbe-ID (GAID / IDFA nach Einwilligung), grobe IP-Region, Werbeinteraktionen, Diagnosedaten</td>
+            <td>Ausspielung von Belohnungs-/Interstitial-Anzeigen im Free-Tarif, Messung &amp; Betrugsprävention</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Einwilligungswiderruf, Werbe-ID &amp; Betroffenenrechte (EWR/UK)</h2>
+      <ul>
+        <li><strong>iOS</strong>: Sie können das Tracking jederzeit unter <code>Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Tracking</code> deaktivieren.</li>
+        <li><strong>Android</strong>: Sie können Ihre Werbe-ID jederzeit unter <code>Einstellungen &gt; Google &gt; Werbung</code> zurücksetzen oder löschen.</li>
+        <li><strong>DSGVO-Rechte</strong>: Im EWR/UK können Sie Ihre Werbeeinwilligung jederzeit zurückziehen. Durch Deinstallation der App oder Löschen des App-Speichers werden sämtliche lokalen Daten sofort und unwiderruflich gelöscht. Ein Upgrade auf <strong>1% Pro</strong> deaktiviert alle AdMob-Anfragen dauerhaft.</li>
+      </ul>
+
+      <h2>4. Verantwortlicher &amp; Kontakt</h2>
+      <ul>
+        <li><strong>Anbieter</strong>: SayMake (Vertretungsberechtigter: Taejin Kim)</li>
+        <li><strong>Anschrift</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seoul, Republik Korea</li>
+        <li><strong>E-Mail</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== FRENCH (fr) ==================== -->
+    <section id="lang-fr" class="lang-section" lang="fr">
+      <h1>Politique de confidentialité</h1>
+      <div class="updated">Date d'entrée en vigueur : 27 octobre 2026 (Dernière mise à jour : 4 novembre 2026)</div>
+
+      <div class="callout">
+        <strong>En bref :</strong> <strong>1% Habit Log</strong> est une application <strong>100 % locale, sans inscription ni serveur cloud</strong>. Vos habitudes, minuteurs et statistiques restent exclusivement sur votre téléphone.
+      </div>
+
+      <p>SayMake (« nous » ou la « Société ») respecte votre vie privée dans le cadre de l'application mobile <strong>1% Habit Log (identifiant : <code>com.saymake.onepercentlog</code>, le « Service »)</strong> conformément au RGPD (GDPR) ainsi qu'aux règles de Google Play et de l'App Store d'Apple.</p>
+
+      <h2>1. Stockage local &amp; données non collectées</h2>
+      <ol>
+        <li>Aucun compte ni identifiant personnel (nom, e-mail, téléphone, localisation GPS précise) n'est demandé ou collecté.</li>
+        <li>Toutes vos déclarations d'habitudes (Quand / Où / Quoi), sessions de minuteur et statistiques sont stockées <strong>uniquement dans la base locale de votre appareil (SQLite / LocalStorage)</strong>.</li>
+        <li>Les rappels fonctionnent uniquement via des <strong>notifications locales</strong> sur l'appareil.</li>
+      </ol>
+
+      <h2>2. Données traitées via des SDK tiers (RGPD)</h2>
+      <p>Pour vérifier les achats intégrés (art. 6.1.b RGPD) et diffuser des publicités dans la version gratuite (art. 6.1.a/f RGPD), nous utilisons les SDK suivants avec chiffrement TLS :</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Fournisseur (SDK)</th>
+            <th>Données traitées</th>
+            <th>Finalité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Confidentialité</a></td>
+            <td>Identifiant anonyme d'application, reçus d'achat App Store / Google Play, statut d'abonnement</td>
+            <td>Validation de l'accès 1% Pro et restauration des achats sur un nouvel appareil</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Confidentialité</a></td>
+            <td>Identifiant publicitaire (GAID / IDFA avec consentement), région IP approximative, journaux d'annonces et diagnostics</td>
+            <td>Diffusion de publicités avec récompense pour débloquer des outils gratuits et prévention de la fraude</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Contrôle du suivi publicitaire &amp; droits RGPD</h2>
+      <ul>
+        <li><strong>iOS</strong> : Gérez ou retirez l'autorisation ATT dans <code>Réglages &gt; Confidentialité et sécurité &gt; Suivi</code>.</li>
+        <li><strong>Android</strong> : Réinitialisez ou supprimez votre identifiant publicitaire dans <code>Paramètres &gt; Google &gt; Annonces</code>.</li>
+        <li><strong>Suppression immédiate</strong> : La désinstallation de l'application ou l'effacement des données locales supprime immédiatement et définitivement toutes vos entrées.</li>
+      </ul>
+
+      <h2>4. Responsable du traitement &amp; contact</h2>
+      <ul>
+        <li><strong>Éditeur</strong> : SayMake (Représentant : Taejin Kim)</li>
+        <li><strong>Adresse</strong> : #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Séoul, République de Corée</li>
+        <li><strong>E-mail</strong> : <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== SPANISH (es) ==================== -->
+    <section id="lang-es" class="lang-section" lang="es">
+      <h1>Política de Privacidad</h1>
+      <div class="updated">Fecha de entrada en vigor: 27 de octubre de 2026 (Última actualización: 4 de noviembre de 2026)</div>
+
+      <div class="callout">
+        <strong>Resumen clave:</strong> <strong>1% Habit Log</strong> es una aplicación <strong>100 % local, sin registro ni servidores en la nube</strong>. Tus hábitos, temporizadores y registros permanecen únicamente en tu dispositivo.
+      </div>
+
+      <p>SayMake («nosotros» o la «Compañía») protege tu privacidad al utilizar la aplicación móvil <strong>1% Habit Log (ID: <code>com.saymake.onepercentlog</code>, el «Servicio»)</strong> en cumplimiento del RGPD (GDPR), normativas locales de privacidad y políticas de Google Play y Apple App Store.</p>
+
+      <h2>1. Almacenamiento local y datos que NO recopilamos</h2>
+      <ol>
+        <li>El Servicio <strong>no requiere crear una cuenta ni iniciar sesión</strong>. No recopilamos tu nombre, correo electrónico, número de teléfono ni ubicación GPS precisa.</li>
+        <li>Todas tus declaraciones de hábitos (Cuándo / Dónde / Qué), tiempos de enfoque, rachas y estadísticas se guardan <strong>exclusivamente en la base de datos interna de tu teléfono (SQLite / LocalStorage)</strong>.</li>
+        <li>Los recordatorios funcionan mediante <strong>notificaciones locales</strong> en el propio dispositivo.</li>
+      </ol>
+
+      <h2>2. Información procesada mediante SDK de terceros</h2>
+      <p>Para validar compras integradas y mostrar anuncios en el plan gratuito, empleamos los siguientes SDK cifrados en tránsito (HTTPS/TLS):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Proveedor (SDK)</th>
+            <th>Datos procesados</th>
+            <th>Finalidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RevenueCat, Inc.</strong><br><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacidad</a></td>
+            <td>ID de usuario anónimo, recibos de compra de App Store / Google Play y estado de suscripción</td>
+            <td>Verificar membresías 1% Pro y procesar [Restaurar compras] al cambiar de dispositivo</td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC (AdMob)</strong><br><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidad</a></td>
+            <td>ID de publicidad (GAID / IDFA con permiso), región aproximada por IP, interacciones con anuncios y diagnóstico</td>
+            <td>Mostrar anuncios recompensados en el plan gratuito, medición y prevención de fraude</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Control de seguimiento publicitario y eliminación de datos</h2>
+      <ul>
+        <li><strong>iOS</strong>: Puedes revocar el seguimiento en cualquier momento desde <code>Ajustes &gt; Privacidad y seguridad &gt; Rastreo</code>.</li>
+        <li><strong>Android</strong>: Puedes restablecer o eliminar tu ID de publicidad en <code>Ajustes &gt; Google &gt; Anuncios</code>.</li>
+        <li><strong>Eliminación inmediata</strong>: Al desinstalar la aplicación o borrar sus datos desde los ajustes del teléfono, todos tus registros locales se eliminan de forma inmediata y permanente.</li>
+      </ul>
+
+      <h2>4. Contacto y responsable</h2>
+      <ul>
+        <li><strong>Desarrollador</strong>: SayMake (Responsable: Taejin Kim)</li>
+        <li><strong>Dirección</strong>: #402-a600 Charmzone Bldg, 20 Hakdong-ro 24-gil, Gangnam-gu, Seúl, República de Corea</li>
+        <li><strong>Correo electrónico</strong>: <a href="mailto:saymake.official@gmail.com">saymake.official@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      <span>© 2026 SayMake Studio · 1% Habit Log</span>
+      <span><a href="./terms.html">이용약관 / Terms</a> · <a href="./index.html">고객지원 / Support</a></span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const theme = params.get('theme');
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+      else if (theme === 'light') document.documentElement.classList.add('light');
+
+      const supported = ['ko', 'en', 'ja', 'zh-TW', 'de', 'fr', 'es'];
+      function normalizeLang(raw) {
+        if (!raw) return null;
+        const lower = raw.toLowerCase();
+        if (lower.startsWith('ko')) return 'ko';
+        if (lower.startsWith('ja')) return 'ja';
+        if (lower.startsWith('zh')) return 'zh-TW';
+        if (lower.startsWith('de')) return 'de';
+        if (lower.startsWith('fr')) return 'fr';
+        if (lower.startsWith('es')) return 'es';
+        if (lower.startsWith('en')) return 'en';
+        return null;
+      }
+
+      function setLang(lang, updateUrl) {
+        if (!supported.includes(lang)) lang = 'ko';
+        document.documentElement.lang = lang === 'zh-TW' ? 'zh-Hant' : lang;
+        document.querySelectorAll('.lang-section').forEach((el) => {
+          el.classList.toggle('active', el.id === 'lang-' + lang);
+        });
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+        if (updateUrl && window.history && window.history.replaceState) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('lang', lang);
+          window.history.replaceState({}, '', url.toString());
+        }
+      }
+
+      const initial = normalizeLang(params.get('lang')) || normalizeLang(navigator.language) || 'ko';
+      setLang(initial, false);
+
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          setLang(this.getAttribute('data-lang'), true);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

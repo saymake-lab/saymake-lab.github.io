@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>이용약관 | Terms of Service — ShadowMimic Log</title>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const theme = params.get("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (theme === "light") {
+        document.documentElement.classList.add("light");
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-wrapper: #ffffff;
+      --bg-subtle: #f5f3ff;
+      --text-main: #334155;
+      --text-header: #0f172a;
+      --text-muted: #64748b;
+      --text-footer: #94a3b8;
+      --primary: #7c3aed;
+      --primary-soft: rgba(124, 58, 237, 0.12);
+      --border: #e2e8f0;
+      --link: #7c3aed;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --bg-body: #090d16;
+        --bg-wrapper: #111827;
+        --bg-subtle: #1f1b2e;
+        --text-main: #cbd5e1;
+        --text-header: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-footer: #64748b;
+        --primary: #a78bfa;
+        --primary-soft: rgba(167, 139, 250, 0.16);
+        --border: #1f2937;
+        --link: #c4b5fd;
+      }
+    }
+
+    html.dark {
+      --bg-body: #090d16;
+      --bg-wrapper: #111827;
+      --bg-subtle: #1f1b2e;
+      --text-main: #cbd5e1;
+      --text-header: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-footer: #64748b;
+      --primary: #a78bfa;
+      --primary-soft: rgba(167, 139, 250, 0.16);
+      --border: #1f2937;
+      --link: #c4b5fd;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 14px 48px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-wrapper);
+      padding: 32px 26px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 24px; font-weight: 900; color: var(--text-header); margin: 0 0 6px; }
+    .updated { font-size: 12px; color: var(--text-muted); margin-bottom: 22px; }
+    h2 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-header);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--primary);
+      padding-left: 10px;
+    }
+    p { margin: 8px 0; }
+    ol, ul { padding-left: 22px; margin: 8px 0; }
+    li { margin-bottom: 6px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-footer);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <a class="brand" href="./index.html">🎙️ SayMake Studio · ShadowMimic Log</a>
+      <div class="lang-tabs" role="tablist" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+    </div>
+
+    <!-- Korean Section -->
+    <article id="lang-ko" class="lang-section active" lang="ko">
+      <span class="badge">표준 EULA 및 서비스 약관</span>
+      <h1>이용약관 (Terms of Service)</h1>
+      <div class="updated">최종 수정일: 2026년 11월 17일</div>
+      
+      <section style="margin-top: 24px;">
+        <h2>제1조 (목적 및 효력)</h2>
+        <p>본 이용약관(이하 "약관")은 ShadowMimic Log(이하 "앱" 또는 "서비스")를 제공하는 개발사(이하 "회사")와 사용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다. 사용자가 앱을 다운로드, 설치 또는 사용하는 것은 본 약관의 모든 조건에 동의한 것으로 간주됩니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제2조 (서비스의 제공 및 온디바이스 음성 처리)</h2>
+        <p>1. 본 서비스는 마이크를 통한 실시간 음성 피치(Pitch) 분석, 억양 시각화, 문장 섀도잉 및 발음 트레이닝 기능을 제공합니다.</p>
+<p>2. (온디바이스 원칙) 사용자의 음성 데이터와 피치 연산은 일체 외부 원격 서버로 전송되지 않으며, 사용자의 기기 내부 로컬 샌드박스에서 100% 독립적으로 처리됩니다.</p>
+<p>3. 본 서비스는 개인 어학 훈련을 위한 보조 도구이며, 공인 어학 평가 시험의 공인 인증 점수나 의료 목적의 언어치료(Speech Therapy)를 대체하지 않습니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제3조 (구독 및 인앱 결제 정책 - Standard EULA)</h2>
+        <p>1. 본 앱은 무료 기능과 유료 구독(Premium/Pro) 멤버십을 제공합니다.</p>
+<p>2. 결제 청구: 유료 구독 결제는 구매 확인 시 사용자의 Apple App Store 또는 Google Play 계정으로 청구됩니다.</p>
+<p>3. 자동 갱신: 구독은 현재 구독 기간 만료 최소 24시간 전에 사용자가 자동 갱신을 해제하지 않는 한 동일한 요금 및 기간으로 자동 갱신됩니다.</p>
+<p>4. 구독 관리 및 해지: 사용자는 언제든지 기기의 App Store(iOS) 또는 Google Play Store(Android) 계정 설정 > 구독 관리 메뉴에서 직접 구독을 취소하거나 변경할 수 있습니다. 앱을 삭제하더라도 구독이 자동으로 취소되지 않습니다.</p>
+<p>5. 환불 정책: 모든 인앱 결제 및 구독 환불은 Apple 및 Google의 플랫폼 환불 운영 정책에 따라 전적으로 처리됩니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제4조 (지식재산권 및 이용자 콘텐츠)</h2>
+        <p>1. 앱 내에 포함된 커리큘럼 문장, 한글/외국어 학습 데이터, 음성 알고리즘, 디자인, 상표 및 그래픽에 대한 모든 지식재산권은 회사에 귀속됩니다. 사용자는 이를 무단 복제, 배포, 역컴파일(리버스 엔지니어링)할 수 없습니다.</p>
+<p>2. 사용자가 직접 입력한 커스텀 연습 문장의 저작권은 사용자 본인에게 있으며, 해당 데이터는 사용자 기기의 로컬 저장소에만 보관됩니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제5조 (광고 및 제3자 서비스)</h2>
+        <p>1. 무료 버전 이용자에게는 제3자 광고(Google AdMob)가 게재될 수 있습니다. 광고 시청과 관련된 데이터 처리는 광고 제공업체의 정책을 따릅니다.</p>
+<p>2. 사용자가 선택적으로 구글 드라이브(Google Drive) 백업 기능을 이용하는 경우, 데이터는 사용자의 개인 클라우드 드라이브와 기기 간 직접 암호화 통신으로만 동기화되며 회사는 이에 접근할 수 없습니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제6조 (면책 조항 및 책임의 한계)</h2>
+        <p>1. 회사는 천재지변, OS 업데이트에 따른 일시적 호환성 오류, 기기 마이크 하드웨어 결함 등으로 인한 서비스 장애에 대해 합리적인 주의를 다한 경우 책임을 부담하지 않습니다.</p>
+<p>2. 법률이 허용하는 최대 한도 내에서 회사는 서비스 이용으로 인한 간접적, 파생적 손해에 대해 책임을 지지 않으며, 회사의 총 배상 책임은 사용자가 최근 12개월간 회사에 지급한 유료 결제 금액을 초과하지 않습니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제7조 (준거법 및 분쟁 해결)</h2>
+        <p>본 약관은 대한민국 법률을 준거법으로 하며, 서비스 이용과 관련하여 분쟁이 발생할 경우 대한민국 법령에 따른 관할 법원을 제1심 관할 법원으로 합니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>제8조 (고객 지원 및 문의)</h2>
+        <p>서비스 이용 및 약관에 대한 문의사항은 아래 연락처로 접수해 주시면 성실히 답변드리겠습니다.</p>
+<ul><li>공식 고객지원 이메일: saymake.official@gmail.com</li></ul>
+      </section>
+      
+    </article>
+
+    <!-- English Section -->
+    <article id="lang-en" class="lang-section" lang="en">
+      <span class="badge">Standard EULA & Terms of Use</span>
+      <h1>Terms of Service</h1>
+      <div class="updated">Last Updated: November 17, 2026</div>
+      
+      <section style="margin-top: 24px;">
+        <h2>1. Agreement to Terms</h2>
+        <p>By downloading, accessing, or using ShadowMimic Log ("App", "Service", or "we"), you agree to be bound by these Terms of Service ("Terms") and Apple's standard Licensed Application End User License Agreement (EULA) where applicable. If you do not agree to these Terms, please do not use the Application.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>2. Educational Service & On-Device Processing</h2>
+        <ul><li>Service Description: The App provides speech shadowing, real-time pitch contour analysis, pronunciation training, and language curriculum.</li>
+<li>100% On-Device Principle: All microphone audio capture and pitch extraction algorithms run entirely locally within your device's sandboxed environment. No raw voice audio is transmitted to external remote servers.</li>
+<li>Educational Disclaimer: The App is a self-study pronunciation training aid. It does not constitute accredited testing credentials, language certification, or clinical speech-language pathology diagnosis.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>3. In-App Purchases & Subscriptions (Standard EULA)</h2>
+        <ul><li>Billing: Payment will be charged to your Apple ID (App Store) or Google Account (Google Play) upon confirmation of purchase.</li>
+<li>Auto-Renewal: Subscriptions automatically renew at the applicable rate unless auto-renew is cancelled at least 24 hours prior to the end of the current billing cycle.</li>
+<li>Managing Subscriptions: You can manage or cancel your subscription anytime via your device's Account Settings (App Store or Google Play Store). Uninstalling the App does not automatically terminate an active subscription.</li>
+<li>Refunds: All refunds adhere strictly to Apple App Store and Google Play Store consumer policies.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>4. Intellectual Property & User Content</h2>
+        <ul><li>Intellectual Property: All application design, audio comparison algorithms, speech curriculum, trademarks, and text assets are the exclusive intellectual property of the developer and protected by international copyright laws. Unauthorized reproduction, modification, or reverse engineering is prohibited.</li>
+<li>User Content: Any custom sentences or practice notes entered by the user belong to the user and are stored strictly on the local device.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>5. Advertising & Third-Party Integrations</h2>
+        <ul><li>Free Tier Ads: The free version may display advertising served by Google AdMob, which operates according to Google's privacy policies.</li>
+<li>Optional Cloud Backup: Google Drive synchronization connects directly between your device and your personal Google account. We have zero access to your Google credentials or drive storage.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>6. Disclaimer of Warranties & Limitation of Liability</h2>
+        <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE OF THE SERVICE. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE SERVICE IN THE PRECEDING 12 MONTHS.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>7. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the applicable laws, without regard to conflict of law principles. Any legal action shall be brought in the competent court having jurisdiction.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>8. Contact Information</h2>
+        <p>For questions, feedback, or support regarding these Terms, please contact us:</p>
+<ul><li>Support Email: saymake.official@gmail.com</li></ul>
+      </section>
+      
+    </article>
+
+    <div class="footer">
+      <span>&copy; 2026 SayMake Studio. All rights reserved.</span>
+      <span>
+        <a href="./index.html">서비스 홈</a> ·
+        <a href="privacy.html">개인정보처리방침</a>
+      </span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll(".lang-btn");
+      const sections = document.querySelectorAll(".lang-section");
+
+      function setLang(lang) {
+        tabs.forEach(t => t.classList.toggle("active", t.dataset.lang === lang));
+        sections.forEach(s => s.classList.toggle("active", s.id === "lang-" + lang));
+        try { localStorage.setItem("mimic_legal_lang", lang); } catch (e) {}
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => setLang(tab.dataset.lang));
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get("lang");
+      let saved = null;
+      try { saved = localStorage.getItem("mimic_legal_lang"); } catch (e) {}
+      const userLang = (navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en";
+      const target = ["ko", "en"].includes(urlLang) ? urlLang : (saved || userLang);
+      setLang(target);
+    })();
+  </script>
+</body>
+
+</html>

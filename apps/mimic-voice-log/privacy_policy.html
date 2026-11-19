@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>개인정보 처리방침 | Privacy Policy — ShadowMimic Log</title>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const theme = params.get("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else if (theme === "light") {
+        document.documentElement.classList.add("light");
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-wrapper: #ffffff;
+      --bg-subtle: #f5f3ff;
+      --text-main: #334155;
+      --text-header: #0f172a;
+      --text-muted: #64748b;
+      --text-footer: #94a3b8;
+      --primary: #7c3aed;
+      --primary-soft: rgba(124, 58, 237, 0.12);
+      --border: #e2e8f0;
+      --link: #7c3aed;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --bg-body: #090d16;
+        --bg-wrapper: #111827;
+        --bg-subtle: #1f1b2e;
+        --text-main: #cbd5e1;
+        --text-header: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-footer: #64748b;
+        --primary: #a78bfa;
+        --primary-soft: rgba(167, 139, 250, 0.16);
+        --border: #1f2937;
+        --link: #c4b5fd;
+      }
+    }
+
+    html.dark {
+      --bg-body: #090d16;
+      --bg-wrapper: #111827;
+      --bg-subtle: #1f1b2e;
+      --text-main: #cbd5e1;
+      --text-header: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-footer: #64748b;
+      --primary: #a78bfa;
+      --primary-soft: rgba(167, 139, 250, 0.16);
+      --border: #1f2937;
+      --link: #c4b5fd;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 14px 48px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-wrapper);
+      padding: 32px 26px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 24px; font-weight: 900; color: var(--text-header); margin: 0 0 6px; }
+    .updated { font-size: 12px; color: var(--text-muted); margin-bottom: 22px; }
+    h2 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-header);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--primary);
+      padding-left: 10px;
+    }
+    p { margin: 8px 0; }
+    ol, ul { padding-left: 22px; margin: 8px 0; }
+    li { margin-bottom: 6px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-footer);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <a class="brand" href="./index.html">🎙️ SayMake Studio · ShadowMimic Log</a>
+      <div class="lang-tabs" role="tablist" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="ko">한국어</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+    </div>
+
+    <!-- Korean Section -->
+    <article id="lang-ko" class="lang-section active" lang="ko">
+      <span class="badge">GDPR · CCPA · 개인정보보호법 준수</span>
+      <h1>개인정보 처리방침 (Privacy Policy)</h1>
+      <div class="updated">시행일자: 2026년 11월 17일</div>
+      
+      <section style="margin-top: 24px;">
+        <h2>1. 제로-서버(Zero-Server) 프라이버시 원칙</h2>
+        <p>ShadowMimic Log(이하 "앱")는 사용자의 프라이버시를 최우선 가치로 삼으며, 자체 원격 서버를 두지 않는 "제로 서버 온디바이스(Zero-Server On-Device)" 아키텍처로 설계되었습니다. 사용자의 모든 음성 녹음 데이터는 사용자의 기기 내부에서만 즉시 분석되며 외부로 전송되거나 저장되지 않습니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>2. 처리하는 개인정보 항목 및 처리 방식</h2>
+        <p>1. 음성 데이터(마이크): 사용자의 발음 및 피치(음높이) 분석을 위해 실시간 마이크 입력을 사용합니다. 녹음된 음성은 로컬 메모리에서 피치 추출 즉시 소멸되며, 오디오 파일 형태로 서버에 수집되거나 저장되지 않습니다.</p>
+<p>2. 학습 기록 및 설정: 반복 횟수, 코러스 일치 점수, 북마크, 직접 입력한 문장은 사용자 기기의 로컬 데이터베이스(SQLite)에만 암호화/격리 보관됩니다.</p>
+<p>3. 결제 및 구매 영수증: 구독 활성화 확인을 위해 익명화된 거래 토큰이 Apple, Google, RevenueCat SDK를 통해 보안 처리됩니다.</p>
+<p>4. 기기 식별자 및 광고(무료 버전): Google AdMob을 통한 배너/전면 광고 게재 시 기기 식별자(IDFA/GAID) 및 광고 성과 분석 데이터가 처리될 수 있습니다.</p>
+<p>5. 선택적 백업(Google Drive): 사용자가 수동으로 동기화를 활성화한 경우에 한해 사용자 본인의 개인 구글 드라이브와 기기 간 직접 암호화 파일 전송이 이루어집니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>3. 개인정보의 보유 및 파기 절차</h2>
+        <p>1. 회사는 자체 서버에 개인정보를 저장하지 않으므로 서버상 보유 데이터가 존재하지 않습니다.</p>
+<p>2. 기기에 저장된 모든 로컬 데이터는 설정 화면의 [데이터 초기화] 기능을 통해 사용자가 즉시 영구 파기할 수 있으며, 앱 삭제 시 기기 샌드박스 정책에 따라 전량 자동 파기됩니다.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>4. 개인정보의 제3자 제공 및 위탁</h2>
+        <p>회사는 사용자의 개인정보를 판매, 임대, 공유하지 않습니다. 서비스 운영에 필수적인 제3자 SDK 제공자는 다음과 같습니다:</p>
+<ul><li>인앱 결제 처리: Apple Inc. (iOS), Google LLC (Android), RevenueCat Inc.</li>
+<li>모바일 광고 제공(무료 버전): Google AdMob (Google LLC)</li>
+<li>음성 합성(TTS): OS 내장 TTS 및 Google Cloud Text-to-Speech(오디오 스트리밍 캐시)</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>5. 글로벌 정보주체의 권리 보장 (GDPR & CCPA)</h2>
+        <ul><li>GDPR(유럽연합): 정보주체는 개인정보에 대한 열람권, 정정권, 삭제권(잊힐 권리), 이동권을 보유합니다. 앱 내 데이터 초기화 기능을 통해 언제든지 즉각적으로 권리를 행사할 수 있습니다.</li>
+<li>CCPA/CPRA(미국 캘리포니아): 회사는 사용자의 개인정보를 상업적으로 "판매(Sell)"하거나 타깃 광고 목적으로 "공유(Share)"하지 않습니다 ("Do Not Sell or Share My Personal Information" 원칙 준수).</li>
+<li>아동 보호(COPPA): 본 앱은 만 14세 미만(미국의 경우 만 13세 미만) 아동의 식별 가능한 개인정보를 고의로 수집하지 않습니다.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>6. 개인정보의 안전성 확보 조치</h2>
+        <p>1. 운영체제 레벨의 로컬 앱 샌드박스(Sandbox) 데이터 격리 적용</p>
+<p>2. 외부 연동 시 최신 표준 암호화 통신(HTTPS/TLS) 의무 적용</p>
+<p>3. 마이크 권한은 사용자가 녹음/연습 화면에 진입하여 직접 시작 버튼을 누를 때에만 활성화</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>7. 개인정보 보호책임자(DPO) 및 연락처</h2>
+        <p>개인정보 보호와 관련된 문의, 불만 처리, 권리 행사는 아래의 개인정보 보호책임자에게 문의해 주시기 바랍니다.</p>
+<ul><li>개인정보 보호책임자: ShadowMimic Log 프라이버시 담당 부서</li>
+<li>전자우편 문의: saymake.official@gmail.com</li></ul>
+      </section>
+      
+    </article>
+
+    <!-- English Section -->
+    <article id="lang-en" class="lang-section" lang="en">
+      <span class="badge">GDPR · CCPA Compliant</span>
+      <h1>Privacy Policy</h1>
+      <div class="updated">Effective Date: November 17, 2026</div>
+      
+      <section style="margin-top: 24px;">
+        <h2>1. Zero-Server Privacy Architecture</h2>
+        <p>ShadowMimic Log ("App", "we", or "us") is architected with a strict "Zero-Server On-Device" privacy standard. We do not operate remote servers to harvest or inspect your personal communications. All acoustic pitch extraction and pronunciation evaluation occur 100% locally on your personal device.</p>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>2. Data Collection and Usage</h2>
+        <ul><li>Voice & Microphone Audio: When practicing speech, microphone input is analyzed instantaneously in volatile device memory to visualize pitch contours. Raw voice recordings are never uploaded to remote servers.</li>
+<li>Local Training History: Sentence completion stats, pitch scores, and custom sentences reside solely in your device's local storage (SQLite).</li>
+<li>Subscription Tokens: In-app billing is securely managed via Apple App Store, Google Play Billing, and RevenueCat SDK. We do not store credit card or payment credentials.</li>
+<li>Diagnostics & Advertising: Free versions utilize Google AdMob. AdMob may process anonymous device identifiers (such as IDFA or GAID) in accordance with standard advertising frameworks.</li>
+<li>Optional Google Drive Backup: If you connect Google Drive, data is synchronized directly between your device and your personal cloud storage. We cannot view or access your Google account.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>3. Data Retention and Erasure Rights</h2>
+        <ul><li>Because no user accounts or audio recordings are collected on remote servers, no central copies of your data exist.</li>
+<li>Instant Local Erasure: You may permanently wipe all local study history and bookmarks at any moment by tapping "Reset Data" in Settings, or by uninstalling the application.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>4. Third-Party Service Providers</h2>
+        <p>We integrate vetted industry-standard service providers strictly to deliver platform functionality:</p>
+<ul><li>In-App Billing: Apple App Store, Google Play Store, RevenueCat</li>
+<li>In-App Advertising (Free Version): Google AdMob (Google LLC)</li>
+<li>Speech Synthesis: On-device system TTS and Google Cloud Text-to-Speech API</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>5. Global Privacy Rights (GDPR, CCPA/CPRA, & COPPA)</h2>
+        <ul><li>European Union (GDPR): You have the right to access, rectify, port, and erase your personal data. You can exercise full erasure locally at any time via the in-app reset feature.</li>
+<li>California (CCPA/CPRA): We do not sell or share your personal information to third parties for monetary or commercial consideration.</li>
+<li>Children's Online Privacy Protection (COPPA): We do not knowingly collect personal information from children under 13 (or under 14 in South Korea).</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>6. Security Safeguards</h2>
+        <ul><li>Data is strictly isolated within the operating system's local application sandbox.</li>
+<li>Any external network transmission (e.g. subscription receipt validation) requires authenticated TLS/HTTPS encryption.</li>
+<li>The microphone is accessed strictly when you actively initiate recording sessions.</li></ul>
+      </section>
+      
+
+      <section style="margin-top: 24px;">
+        <h2>7. Contact Us & Data Protection Inquiries</h2>
+        <p>If you have questions, feedback, or requests regarding this Privacy Policy or your personal data rights, please contact our Data Protection team:</p>
+<ul><li>Privacy Support: saymake.official@gmail.com</li></ul>
+      </section>
+      
+    </article>
+
+    <div class="footer">
+      <span>&copy; 2026 SayMake Studio. All rights reserved.</span>
+      <span>
+        <a href="./index.html">서비스 홈</a> ·
+        <a href="terms.html">이용약관</a>
+      </span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll(".lang-btn");
+      const sections = document.querySelectorAll(".lang-section");
+
+      function setLang(lang) {
+        tabs.forEach(t => t.classList.toggle("active", t.dataset.lang === lang));
+        sections.forEach(s => s.classList.toggle("active", s.id === "lang-" + lang));
+        try { localStorage.setItem("mimic_legal_lang", lang); } catch (e) {}
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => setLang(tab.dataset.lang));
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get("lang");
+      let saved = null;
+      try { saved = localStorage.getItem("mimic_legal_lang"); } catch (e) {}
+      const userLang = (navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en";
+      const target = ["ko", "en"].includes(urlLang) ? urlLang : (saved || userLang);
+      setLang(target);
+    })();
+  </script>
+</body>
+
+</html>
